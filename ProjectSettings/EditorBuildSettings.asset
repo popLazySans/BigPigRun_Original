@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/gen.unity
+    guid: 60fdefe2db1a5ae478e0bb8f8c1174bb
+  - enabled: 1
+    path: Assets/Height.unity
+    guid: 2fd0a616e8d9ddd4d916d50fd7318b7d
+  - enabled: 1
+    path: Assets/Weight.unity
+    guid: ed3dd767aa487e94b83257db0419d2ab
+  - enabled: 1
+    path: Assets/Age.unity
+    guid: 606d3b79f4b6d15448e4ae2e03bc07ed
+  - enabled: 1
+    path: Assets/Thank.unity
+    guid: 2291dc67e1b547640839f3de3eb90a03
+  - enabled: 1
+    path: Assets/main.unity
+    guid: b0339a4f077902e43ba4a72501c1a2d8
+  - enabled: 1
+    path: Assets/mainE.unity
+    guid: 6a330d1806865b34ea072191d40a6a02
+  - enabled: 1
+    path: Assets/Setting.unity
+    guid: 703a11509ded7ba48b1637692e52c7ec
+  - enabled: 1
+    path: Assets/score.unity
+    guid: 59197bcf7e078644789d2e81e4f8347b
+  - enabled: 1
+    path: Assets/how.unity
+    guid: 0bbc64794d0c1714eb914819beb85ab0
+  - enabled: 1
+    path: Assets/cut.unity
+    guid: 1b0c13b7a44ffbd4da451ecfe0e7ab5c
+  - enabled: 1
+    path: Assets/SpherePlayTest.unity
+    guid: 231e468b49b8403498ba0c91caf1dcec
+  - enabled: 1
+    path: Assets/SpherePlay1.unity
+    guid: b45466c20054b884a8c568862670b088
+  - enabled: 1
+    path: Assets/Info.unity
+    guid: f1f5966bb096210428313d877328da2b
+  - enabled: 1
+    path: Assets/Info2.unity
+    guid: a2854d4146760094eb51f7cbc49e8c17
+  - enabled: 1
+    path: Assets/bird.unity
+    guid: 914b08c1078fc474ebac835658c87519
+  - enabled: 1
+    path: Assets/hamburger.unity
+    guid: 8d5ff1a515be2cf4d9fed48d557458f4
+  - enabled: 1
+    path: Assets/pineapple.unity
+    guid: 7694ff1111ef6764d84d2a22aaab8859
+  - enabled: 1
+    path: Assets/mushroom1.unity
+    guid: 51b9b9890b42f2248bf69d4e73149a7e
+  - enabled: 1
+    path: Assets/mushroom2.unity
+    guid: 1d3e741c57873644dad9191224805fe4
+  - enabled: 1
+    path: Assets/chicken.unity
+    guid: 0745ec84676f6264fbb5239cab44f267
+  - enabled: 1
+    path: Assets/doctor.unity
+    guid: 2e6310329b22c5b418fc44185742908a
+  - enabled: 1
+    path: Assets/salad.unity
+    guid: feaf1d676eae73941922b447f63f2b8f
+  - enabled: 1
+    path: Assets/sushi.unity
+    guid: 59768a179817bd2439ea0e40d0c99d55
+  - enabled: 1
+    path: Assets/watermelon.unity
+    guid: 1c13ddd2d1d3c1c409e172c90d4178ba
+  - enabled: 1
+    path: Assets/cactus.unity
+    guid: 6b05fc436f249be428507442a6705e6a
