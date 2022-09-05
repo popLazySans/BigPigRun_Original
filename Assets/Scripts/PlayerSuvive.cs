@@ -150,18 +150,27 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 
 	void Update () {
-		down = time2 / 7700f;
-		bar.value = point;
-		pon = point;
-		PlayerMovementScript.pot = point;
-		HightScore_Current();
+
+		SettingValue();
 		ChangeColor_Weighter();
 		Die_Statement();
-		Set_Nutrients_text();
 		Ultimate();
 
 	
 		
+	}
+	public void SettingValue()
+    {
+		down = time2 / 7700f;
+		HightScore_Current();
+		SetValueToPoint();
+		Set_Nutrients_text();
+	}
+	public void SetValueToPoint()
+    {
+		bar.value = point;
+		pon = point;
+		PlayerMovementScript.pot = point;
 	}
 	public void HightScore_Current()
     {
