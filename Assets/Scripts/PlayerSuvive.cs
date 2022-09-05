@@ -71,18 +71,11 @@ public class PlayerSuvive : MonoBehaviour {
 	public static int sc = 1;
 	// Use this for initialization
 	void Start () {
-		
 		StartCoroutine (count ());
 		SetHighScore();
 		SetAppearance();
 		checkGender();
-		poL = point;
-		pointP = point + 250;
-		pointD = point - 250;
-		low.text = "Low Cal :" + pointD.ToString ();
-		high.text = "High Cal :"+pointP.ToString ();
-		bar.minValue = pointD;
-		bar.maxValue = pointP;
+		SetCal();
 	}
 	public void SetHighScore()
     {
@@ -133,6 +126,28 @@ public class PlayerSuvive : MonoBehaviour {
 	public void Woman_Calculator()
 	{
 		point = ((10f * height) + (6.25f * weight) - (5f * age) - 161f) * 1.2f;
+	}
+	public void SetCal()
+    {
+		poL = point;
+		SetLowandHightCal();
+		SetCalText();
+		SetCalBar();
+	}
+	public void SetLowandHightCal()
+    {
+		pointP = point + 250;
+		pointD = point - 250;
+	}
+	public void SetCalText()
+    {
+		low.text = "Low Cal :" + pointD.ToString();
+		high.text = "High Cal :" + pointP.ToString();
+	}
+	public void SetCalBar()
+    {
+		bar.minValue = pointD;
+		bar.maxValue = pointP;
 	}
 	// Update is called once per frame
 	void Update () {
