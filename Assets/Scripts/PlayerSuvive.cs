@@ -69,7 +69,6 @@ public class PlayerSuvive : MonoBehaviour {
 	public int sCoreLock5;
 
 	public static int sc = 1;
-	// Use this for initialization
 	void Start () {
 		StartCoroutine (count ());
 		SetHighScore();
@@ -149,164 +148,187 @@ public class PlayerSuvive : MonoBehaviour {
 		bar.minValue = pointD;
 		bar.maxValue = pointP;
 	}
-	// Update is called once per frame
+
 	void Update () {
 		down = time2 / 7700f;
 		bar.value = point;
 		pon = point;
 		PlayerMovementScript.pot = point;
-		/*if (time % 20 == 0 && time != 0) 
+		HightScore_Current();
+		ChangeColor_Weighter();
+		Die_Statement();
+		Set_Nutrients_text();
+		Ultimate();
+
+	
+		
+	}
+	public void HightScore_Current()
+    {
+		if (time > PlayerPrefs.GetFloat("HighScore5", 0))
 		{
-			show.SetActive (true);
-			if (point >= 10 && point <= 20) {
-				show.GetComponent<Text>().text = "Complete";
-
-
-			} 
-			else 
+			if (sCoreLock5 == 0)
 			{
-				show.GetComponent<Text>().text = "Failed";
-				Time.timeScale = 0;
-			
-			}
-			StartCoroutine (twoSec ());
-		}*/
 
-		if (time > PlayerPrefs.GetFloat ("HighScore5", 0)) 
-		{
-			if (sCoreLock5 == 0) {
-				
 				sCoreLock5 = 1;
 			}
-			if (time > PlayerPrefs.GetFloat ("HighScore5", 0) && time < PlayerPrefs.GetFloat ("HighScore4", 0)) {
-				PlayerPrefs.SetFloat ("HighScore5", time);
-				PlayerPrefs.SetString ("Namest5", name);
+			if (time > PlayerPrefs.GetFloat("HighScore5", 0) && time < PlayerPrefs.GetFloat("HighScore4", 0))
+			{
+				PlayerPrefs.SetFloat("HighScore5", time);
+				PlayerPrefs.SetString("Namest5", name);
 
 			}
-				if (time > PlayerPrefs.GetFloat ("HighScore4", 0)) {
-					
-					if (sCoreLock4 == 0) {
-						PlayerPrefs.SetFloat ("HighScore5", PlayerPrefs.GetFloat ("HighScore4", 0));
-						PlayerPrefs.SetString ("Namest5", PlayerPrefs.GetString ("Namest4", ""));
-						sCoreLock4 = 1;
-						
-					}
-				if (time > PlayerPrefs.GetFloat ("HighScore4", 0) && time < PlayerPrefs.GetFloat ("HighScore3", 0)) {
-					PlayerPrefs.SetFloat ("HighScore4", time);
-					PlayerPrefs.SetString ("Namest4", name);
-				}
-					if (time > PlayerPrefs.GetFloat ("HighScore3", 0)) {
-						if (sCoreLock3 == 0) {
-							PlayerPrefs.SetFloat ("HighScore4", PlayerPrefs.GetFloat ("HighScore3", 0));
-							PlayerPrefs.SetString ("Namest4", PlayerPrefs.GetString ("Namest3", ""));
-							sCoreLock3 = 1;
+			if (time > PlayerPrefs.GetFloat("HighScore4", 0))
+			{
 
-						}
-					if (time > PlayerPrefs.GetFloat ("HighScore3", 0) && time < PlayerPrefs.GetFloat ("HighScore2", 0)) {
-						PlayerPrefs.SetFloat ("HighScore3", time);
-						PlayerPrefs.SetString ("Namest3", name);
+				if (sCoreLock4 == 0)
+				{
+					PlayerPrefs.SetFloat("HighScore5", PlayerPrefs.GetFloat("HighScore4", 0));
+					PlayerPrefs.SetString("Namest5", PlayerPrefs.GetString("Namest4", ""));
+					sCoreLock4 = 1;
+
+				}
+				if (time > PlayerPrefs.GetFloat("HighScore4", 0) && time < PlayerPrefs.GetFloat("HighScore3", 0))
+				{
+					PlayerPrefs.SetFloat("HighScore4", time);
+					PlayerPrefs.SetString("Namest4", name);
+				}
+				if (time > PlayerPrefs.GetFloat("HighScore3", 0))
+				{
+					if (sCoreLock3 == 0)
+					{
+						PlayerPrefs.SetFloat("HighScore4", PlayerPrefs.GetFloat("HighScore3", 0));
+						PlayerPrefs.SetString("Namest4", PlayerPrefs.GetString("Namest3", ""));
+						sCoreLock3 = 1;
+
 					}
-					if (time > PlayerPrefs.GetFloat ("HighScore2", 0)) {
-						if (sCoreLock2 == 0) {
-							PlayerPrefs.SetFloat ("HighScore3", PlayerPrefs.GetFloat ("HighScore2", 0));
-							PlayerPrefs.SetString ("Namest3", PlayerPrefs.GetString ("Namest2", ""));
+					if (time > PlayerPrefs.GetFloat("HighScore3", 0) && time < PlayerPrefs.GetFloat("HighScore2", 0))
+					{
+						PlayerPrefs.SetFloat("HighScore3", time);
+						PlayerPrefs.SetString("Namest3", name);
+					}
+					if (time > PlayerPrefs.GetFloat("HighScore2", 0))
+					{
+						if (sCoreLock2 == 0)
+						{
+							PlayerPrefs.SetFloat("HighScore3", PlayerPrefs.GetFloat("HighScore2", 0));
+							PlayerPrefs.SetString("Namest3", PlayerPrefs.GetString("Namest2", ""));
 							sCoreLock2 = 1;
 						}
-						if (time > PlayerPrefs.GetFloat ("HighScore2", 0) && time < PlayerPrefs.GetFloat ("HighScore1", 0)) {
-							PlayerPrefs.SetFloat ("HighScore2", time);
-							PlayerPrefs.SetString ("Namest2", name);
+						if (time > PlayerPrefs.GetFloat("HighScore2", 0) && time < PlayerPrefs.GetFloat("HighScore1", 0))
+						{
+							PlayerPrefs.SetFloat("HighScore2", time);
+							PlayerPrefs.SetString("Namest2", name);
 						}
-						if (time > PlayerPrefs.GetFloat ("HighScore1", 0)) {
-							if (sCoreLock1 == 0) {
-								PlayerPrefs.SetFloat ("HighScore2", PlayerPrefs.GetFloat ("HighScore1", 0));
-								PlayerPrefs.SetString ("Namest2", PlayerPrefs.GetString ("Namest1", ""));
+						if (time > PlayerPrefs.GetFloat("HighScore1", 0))
+						{
+							if (sCoreLock1 == 0)
+							{
+								PlayerPrefs.SetFloat("HighScore2", PlayerPrefs.GetFloat("HighScore1", 0));
+								PlayerPrefs.SetString("Namest2", PlayerPrefs.GetString("Namest1", ""));
 								sCoreLock1 = 1;
 							}
-							PlayerPrefs.SetFloat ("HighScore1", time);
-							PlayerPrefs.SetString ("Namest1", name);
-							}
+							PlayerPrefs.SetFloat("HighScore1", time);
+							PlayerPrefs.SetString("Namest1", name);
 						}
 					}
 				}
+			}
 		}
-		if (pointP >= point && pointD <= point) {
-			
-			iM1.SetActive (true);
-			iM2.SetActive (false);
-		} 
-		else 
+	}
+	public void ChangeColor_Weighter()
+    {
+		if (pointP >= point && pointD <= point)
 		{
-			iM1.SetActive (false);
-			iM2.SetActive (true);
+
+			iM1.SetActive(true);
+			iM2.SetActive(false);
 		}
-		if (point <= 0) 
+		else
 		{
-			hungry.SetActive (true);
-			hide.SetActive (true);
+			iM1.SetActive(false);
+			iM2.SetActive(true);
+		}
+	}
+	public void Die_Statement()
+    {
+		Hungry();
+		Fatty();
+		Doctor_Denied();
+    }
+	public void Hungry()
+    {
+		if (point <= 0)
+		{
+			hungry.SetActive(true);
+			hide.SetActive(true);
 			//show.SetActive (true);
 			//show.GetComponent<Text>().text = "You are weakness";
-			tex.GetComponent<Text>().text ="You get score " + time.ToString()+ " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is "+time2.ToString() + " kcal";
+			tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
+			tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
 			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive (false);
+			antiP.SetActive(false);
 			Time.timeScale = 0;
 			itemN.text = "";
 			itemP.text = "";
 			itemC.text = "";
 			itemO.text = "";
 			itemV.text = "";
-			black.SetActive (false);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
+			black.SetActive(false);
+			itemI1.SetActive(false);
+			itemI2.SetActive(false);
+			itemI3.SetActive(false);
+			itemI4.SetActive(false);
+			itemI5.SetActive(false);
+			itemI6.SetActive(false);
+			itemI7.SetActive(false);
 		}
-		if(sanCheck == 1){
-			hide.SetActive (true);
-			fatty.SetActive (true);
-			tex.GetComponent<Text>().text ="You get score " + time.ToString()+ " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is "+time2.ToString() + " kcal";
+	}
+	public void Fatty()
+    {
+		if (sanCheck == 1)
+		{
+			hide.SetActive(true);
+			fatty.SetActive(true);
+			tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
+			tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
 			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive (false);
+			antiP.SetActive(false);
 			itemN.text = "";
 			itemP.text = "";
 			itemC.text = "";
 			itemO.text = "";
 			itemV.text = "";
-			black.SetActive (false);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
+			black.SetActive(false);
+			itemI1.SetActive(false);
+			itemI2.SetActive(false);
+			itemI3.SetActive(false);
+			itemI4.SetActive(false);
+			itemI5.SetActive(false);
+			itemI6.SetActive(false);
+			itemI7.SetActive(false);
 			Time.timeScale = 0;
 		}
-		/*if (time %  19 == 0 && time != 0) 
+	}
+	public void Doctor_Denied()
+    {
+		if (AutoObjectSpawnerLock.die == 1)
 		{
-			Dc = 1;
+			StartCoroutine(countFive());
 		}
-		if (time % 25 == 0 && time != 0 && Dc == 1) 
+	}
+	public void Set_Nutrients_text()
+    {
+		proBar.text = "Protein " + protein.ToString() + " kCal";
+		carBar.text = "Carbohydrate " + car.ToString() + " kCal";
+		vinBar.text = "Vitamin " + vin.ToString() + " kCal";
+		oilBar.text = "Fat " + trans.ToString() + " kCal";
+		pS.GetComponent<Text>().text = point.ToString() + " kCal";
+	}
+	public void Ultimate()
+    {
+		if (SanA.lockPoint == 1)
 		{
-			show.SetActive (true);
-			show.GetComponent<Text>().text = "Failed";
-			Time.timeScale = 0;
-		}*/
-		proBar.text = "Protein " +protein.ToString() + " kCal";
-		carBar.text = "Carbohydrate "+ car.ToString () + " kCal";
-		vinBar.text = "Vitamin "+vin.ToString() + " kCal";
-		oilBar.text = "Fat "+trans.ToString()+" kCal";
-		if (AutoObjectSpawnerLock.die == 1) 
-		{
-			StartCoroutine (countFive());
-		}
-		PlayerPrefs.SetFloat ("tran", trans);
-		pS.GetComponent<Text> ().text = point.ToString()+" kCal";
-		if(SanA.lockPoint == 1){
 			point = poL;
 			SanA.lockPoint = 0;
 		}
@@ -356,10 +378,7 @@ public class PlayerSuvive : MonoBehaviour {
 		yield return new WaitForSeconds (2);
 		show.SetActive (false);
 	}
-	/*IEnumerator lose()
-	{
-		//Time.timeScale = 0;
-	}*/
+
 	void OnCollisionEnter(Collision other){
 		if (other.gameObject.tag == "Burger") {
 			Destroy (other.gameObject);
