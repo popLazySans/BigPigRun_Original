@@ -73,12 +73,8 @@ public class PlayerSuvive : MonoBehaviour {
 	void Start () {
 		
 		StartCoroutine (count ());
-		highScore.text = "Best Score "+PlayerPrefs.GetFloat ("HighScore1",0).ToString ()+" km";
-		gen = PlayerPrefs.GetInt ("Gender", 0);
-		age = PlayerPrefs.GetInt ("Age", 0);
-		height = PlayerPrefs.GetFloat ("Height", 0);
-		weight = PlayerPrefs.GetFloat ("Weight", 0);
-		name = PlayerPrefs.GetString ("Name", "");
+		SetHighScore();
+		SetAppearance();
 		if (gen == 1) {
 			point = ((10f * height) + (6.25f * weight) - (5f * age) + 5f)*1.2f;
 		}
@@ -93,7 +89,43 @@ public class PlayerSuvive : MonoBehaviour {
 		bar.minValue = pointD;
 		bar.maxValue = pointP;
 	}
-	
+	public void SetHighScore()
+    {
+		highScore.text = "Best Score " + PlayerPrefs.GetFloat("HighScore1", 0).ToString() + " km";
+	}
+	public void SetAppearance()
+    {
+		gen =  SetGender();
+		age = SetAge();
+		height = SetHeight();
+		weight = SetWeight();
+		name = SetName();
+    }
+	public int SetGender()
+    {
+		int gender =  PlayerPrefs.GetInt("Gender",0);
+		return gender;
+    }
+	public int SetAge()
+	{
+		int age = PlayerPrefs.GetInt("Age",0);
+		return age;
+	}
+	public float SetHeight()
+    {
+		float height = PlayerPrefs.GetFloat("Height",0);
+		return height;
+	}
+	public float SetWeight()
+    {
+		float weight = PlayerPrefs.GetFloat("weight", 0);
+		return weight;
+	}
+	public string SetName()
+    {
+		string name = PlayerPrefs.GetString("Name", "");
+		return name;
+	}
 	// Update is called once per frame
 	void Update () {
 		down = time2 / 7700f;
