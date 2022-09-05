@@ -60,7 +60,9 @@ public class AutoObjectSpawner : MonoBehaviour
 			cac.SetActive (true);
 			scene1.SetActive (false);
 			scene2.SetActive (true);
-			col.material.SetColor("_Color", new Color32(249,255,50,20));
+
+			SetMaterialColor(249, 255, 50, 20);
+
 			fast = fast + 10;
 			slow = slow + 18;
 			lol = 1;
@@ -72,7 +74,9 @@ public class AutoObjectSpawner : MonoBehaviour
 			scene2.SetActive (false);
 			scene3.SetActive (true);
 			cac.SetActive (false);
-			col.material.SetColor ("_Color", new Color32 (255,49,49,1));
+
+			SetMaterialColor(255, 49, 49, 1);
+
 			fast = fast - 10;
 			slow = slow - 10;
 			lol = 0;
@@ -83,7 +87,9 @@ public class AutoObjectSpawner : MonoBehaviour
 			sound4.SetActive (true);
 			scene3.SetActive (false);
 			scene4.SetActive (true);
-			col.material.SetColor ("_Color", new Color32 (81,31,106,1));
+
+			SetMaterialColor(81, 31, 106, 1);
+
 			fast = fast -5;
 			slow = slow -5;
 			cas1.SetActive (false);
@@ -100,6 +106,13 @@ public class AutoObjectSpawner : MonoBehaviour
 		StartCoroutine(Fast());
 	}
 
+	void SetMaterialColor(byte r, byte g, byte b, byte a)
+	{
+		col.material.SetColor("_Color", new Color32(r, g, b, a));
+	}
+
+
+
 	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
 	{
@@ -107,7 +120,7 @@ public class AutoObjectSpawner : MonoBehaviour
 			while (true) {
 				
 					// Create some random numbers
-				yield return new WaitForSeconds (Random.Range (fast, slow));
+					yield return new WaitForSeconds (Random.Range (fast, slow));
 					// Generate the new object
 					GameObject newObject = Instantiate<GameObject> (prefabToSpawn);
 					newObject.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
