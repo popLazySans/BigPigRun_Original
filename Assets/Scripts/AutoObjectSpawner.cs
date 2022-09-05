@@ -42,9 +42,9 @@ public class AutoObjectSpawner : MonoBehaviour
 	void Start ()
 	{
 		boxCollider2D = GetComponent<BoxCollider>();
-		 
-			StartCoroutine(SpawnObject());
-			StartCoroutine (Fast ());
+		StartGameCoroutine();
+
+
 
 
 	}
@@ -93,7 +93,13 @@ public class AutoObjectSpawner : MonoBehaviour
 
 		}
 	}
-	
+
+	void StartGameCoroutine()
+	{
+		StartCoroutine(SpawnObject());
+		StartCoroutine(Fast());
+	}
+
 	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
 	{
