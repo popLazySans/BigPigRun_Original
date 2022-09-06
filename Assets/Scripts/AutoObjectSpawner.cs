@@ -47,15 +47,20 @@ public class AutoObjectSpawner : MonoBehaviour
 	void Update()
 	{
 		sc = PlayerSuvive.sc;
-		CheckDesertCondition();
-		CheckCrimsonCondition();
-		CheckCorruptCondition();
+		CheckSceneCondition();
 	}
 
 	void StartGameCoroutine()
 	{
 		StartCoroutine(SpawnObject());
 		StartCoroutine(Fast());
+	}
+
+	void CheckSceneCondition()
+	{
+		CheckDesertCondition();
+		CheckCrimsonCondition();
+		CheckCorruptCondition();
 	}
 
 	void CheckDesertCondition()
