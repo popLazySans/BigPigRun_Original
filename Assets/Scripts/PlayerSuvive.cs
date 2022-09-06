@@ -423,30 +423,39 @@ public class PlayerSuvive : MonoBehaviour {
 	public void Doctor(Collision other)
     {
 		if (other.gameObject.tag == "Checked")
-		{
-			show.SetActive(true);
-			AutoObjectSpawnerLock.die = 0;
-			if (point >= pointD && point <= pointP)
-			{
-				show.SetActive(true);
-				show.GetComponent<Text>().text = "Complete";
-				Dc = 0;
-				sc += 1;
-				trans = 0;
-				protein = 0;
-				car = 0;
-			}
-			else
-			{
-				show.SetActive(false);
-				docty.SetActive(true);
-				hide.SetActive(true);
-				show_died_text();
-			}
-			StartCoroutine(twoSec());
-			Destroy(other.gameObject);
-		}
+		{show.SetActive(true);
+		AutoObjectSpawnerLock.die = 0;
+		Doctor_check();
+		prepare_to_nextwave(other);}
 	}
+	public void Doctor_check()
+    {
+		if (point >= pointD && point <= pointP) { Doctor_complete_check(); }
+		else { Doctor_die_check(); }
+	}
+	public void Doctor_complete_check()
+    {
+		show.SetActive(true);
+		show.GetComponent<Text>().text = "Complete";
+		Dc = 0;
+		sc += 1;
+		trans = 0;
+		protein = 0;
+		car = 0;
+	}
+	public void Doctor_die_check()
+    {
+		show.SetActive(false);
+		docty.SetActive(true);
+		hide.SetActive(true);
+		show_died_text();
+	}
+	public void prepare_to_nextwave(Collision other)
+    {
+		StartCoroutine(twoSec());
+		Destroy(other.gameObject);
+	}
+
 	public void tutorialObject_group(Collision other)
     {
 		pine_test(other);
