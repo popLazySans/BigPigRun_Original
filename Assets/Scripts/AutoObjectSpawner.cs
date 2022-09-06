@@ -51,11 +51,10 @@ public class AutoObjectSpawner : MonoBehaviour
 		{
 			SetActiveSpawn();
 
-			sound1.SetActive (false);
-			sound2.SetActive (true);
+			ChangeActiveGameObject(sound1, sound2);
 			cac.SetActive (true);
-			scene1.SetActive (false);
-			scene2.SetActive (true);
+			ChangeActiveGameObject(scene1, scene2);
+
 
 			SetMaterialColor(249, 255, 50, 20);
 
@@ -66,12 +65,8 @@ public class AutoObjectSpawner : MonoBehaviour
 		}
 		if (sc == 3 && lol == 1) 
 		{
-			sound2.SetActive (false);
-			sound3.SetActive (true);
-			scene2.SetActive (false);
-			scene3.SetActive (true);
+			ChangeActiveGameObject(sound2, sound3);
 			cac.SetActive (false);
-
 			SetMaterialColor(255, 49, 49, 1);
 
 			ChangeSpeed(fast, -10);
@@ -81,10 +76,9 @@ public class AutoObjectSpawner : MonoBehaviour
 		}
 		if (sc == 4 && lol == 0) 
 		{
-			sound3.SetActive (false);
-			sound4.SetActive (true);
-			scene3.SetActive (false);
-			scene4.SetActive (true);
+			ChangeActiveGameObject(sound3, sound4);
+
+			ChangeActiveGameObject(scene3, scene4);
 
 			SetMaterialColor(81, 31, 106, 1);
 
@@ -109,6 +103,12 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		spawn1.SetActive(true);
 		spawn2.SetActive(true);
+	}
+
+	void ChangeActiveGameObject(GameObject currentGameObject, GameObject newGameObject)
+	{
+		currentGameObject.SetActive(false);
+		currentGameObject.SetActive(true);
 	}
 
 	void SetMaterialColor(byte r, byte g, byte b, byte a)
