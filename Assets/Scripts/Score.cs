@@ -16,22 +16,10 @@ public class Score : MonoBehaviour {
 	public Text namest5;
 	public float score;
 	// Use this for initialization
-	void Start () {
-		Debug.Log (PlayerPrefs.GetFloat ("HighScore1", 0));
-		Debug.Log (PlayerPrefs.GetFloat ("HighScore2", 0));
-		Debug.Log (PlayerPrefs.GetFloat ("HighScore3", 0));
-		Debug.Log (PlayerPrefs.GetFloat ("HighScore4", 0));
-		Debug.Log (PlayerPrefs.GetFloat ("HighScore5", 0));
-		best1.text = PlayerPrefs.GetFloat ("HighScore1", 0).ToString () + " km";
-		namest1.text = PlayerPrefs.GetString ("Namest1", "");
-		best2.text = PlayerPrefs.GetFloat ("HighScore2", 0).ToString () + " km";
-		namest2.text = PlayerPrefs.GetString ("Namest2", "");
-		best3.text = PlayerPrefs.GetFloat ("HighScore3", 0).ToString () + " km";
-		namest3.text = PlayerPrefs.GetString ("Namest3", "");
-		best4.text = PlayerPrefs.GetFloat ("HighScore4", 0).ToString () + " km";
-		namest4.text = PlayerPrefs.GetString ("Namest4", "");
-		best5.text = PlayerPrefs.GetFloat ("HighScore5", 0).ToString () + " km";
-		namest5.text = PlayerPrefs.GetString ("Namest5", "");
+	void Start () 
+	{
+		BestScore();
+		NameBestScore();
 	}
 	
 	// Update is called once per frame
@@ -49,5 +37,23 @@ public class Score : MonoBehaviour {
 		PlayerPrefs.DeleteKey ("Namest4");
 		PlayerPrefs.DeleteKey ("HighScore5");
 		PlayerPrefs.DeleteKey ("Namest5");
+	}
+
+	public void BestScore() 
+	{
+		best1.text = PlayerPrefs.GetFloat("HighScore1", 0).ToString() + " km";
+		best2.text = PlayerPrefs.GetFloat("HighScore2", 0).ToString() + " km";
+		best3.text = PlayerPrefs.GetFloat("HighScore3", 0).ToString() + " km";
+		best4.text = PlayerPrefs.GetFloat("HighScore4", 0).ToString() + " km";
+		best5.text = PlayerPrefs.GetFloat("HighScore5", 0).ToString() + " km";
+	}
+
+	public void NameBestScore() 
+	{
+		namest1.text = PlayerPrefs.GetString("Namest1", "");
+		namest2.text = PlayerPrefs.GetString("Namest2", "");
+		namest3.text = PlayerPrefs.GetString("Namest3", "");
+		namest4.text = PlayerPrefs.GetString("Namest4", "");
+		namest5.text = PlayerPrefs.GetString("Namest5", "");
 	}
 }
