@@ -69,7 +69,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		{
 			SetActiveSpawn();
 			SetDesertScene();
-			ChangeCurrentSpeedByFloat(10);
+			ChangeCurrentSpeed(10);
 			lol = 1;
 		}
 	}
@@ -79,7 +79,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		if (sc == 3 && lol == 1)
 		{
 			SetCrimsonScene();
-			ChangeCurrentSpeedByFloat(-10);
+			ChangeCurrentSpeed(-10);
 			lol = 0;
 		}
 	}
@@ -89,7 +89,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		if (sc == 4 && lol == 0)
 		{
 			SetCorruptScene();
-			ChangeCurrentSpeedByFloat(-5);
+			ChangeCurrentSpeed(-5);
 			of.SetActive(true);
 			lol = 1;
 		}
@@ -135,7 +135,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		col.material.SetColor("_Color", new Color32(r, g, b, a));
 	}
 
-	void ChangeCurrentSpeedByFloat(float speed)
+	void ChangeCurrentSpeed(float speed)
 	{
 		ChangeSpeed(fast, speed);
 		ChangeSpeed(slow, speed);
