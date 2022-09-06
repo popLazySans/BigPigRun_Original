@@ -48,36 +48,19 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		sc = PlayerSuvive.sc;
 		if (sc == 2 && lol == 0) 
-		{
-			SetActiveSpawn();
-
-			SetDefaultScene();
-
-			ChangeCurrentSpeedByFloat(10);
-			lol = 1;
-		}
-		if (sc == 3 && lol == 1) 
-		{
+		{	SetActiveSpawn();
 			SetDesertScene();
-
+			ChangeCurrentSpeedByFloat(10);
+			lol = 1;		}
+		if (sc == 3 && lol == 1) 
+		{	SetCrimsonScene();
 			ChangeCurrentSpeedByFloat(-10);
-			lol = 0;
-		}
+			lol = 0;		}
 		if (sc == 4 && lol == 0) 
-		{
-			ChangeActiveGameObject(sound3, sound4);
-
-			ChangeActiveGameObject(scene3, scene4);
-
-			SetMaterialColor(81, 31, 106, 1);
-
+		{	SetCorruptScene();
 			ChangeCurrentSpeedByFloat(-5);
-
-			ChangeActiveGameObject(cas1, cas2);
 			of.SetActive(true);
-			lol = 1;
-
-		}
+			lol = 1;		}
 	}
 
 	void StartGameCoroutine()
@@ -86,7 +69,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		StartCoroutine(Fast());
 	}
 
-	void SetDefaultScene()
+	void SetDesertScene()
 	{
 		ChangeActiveGameObject(sound1, sound2);
 		ChangeActiveGameObject(scene1, scene2);
@@ -94,11 +77,19 @@ public class AutoObjectSpawner : MonoBehaviour
 		SetMaterialColor(249, 255, 50, 20);
 	}
 
-	void SetDesertScene()
+	void SetCrimsonScene()
 	{
 		ChangeActiveGameObject(sound2, sound3);
 		cac.SetActive(false);
 		SetMaterialColor(255, 49, 49, 1);
+	}
+
+	void SetCorruptScene()
+	{
+		ChangeActiveGameObject(sound3, sound4);
+		ChangeActiveGameObject(scene3, scene4);
+		ChangeActiveGameObject(cas1, cas2);
+		SetMaterialColor(81, 31, 106, 1);
 	}
 
 	void SetActiveSpawn()
