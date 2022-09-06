@@ -24,14 +24,12 @@ public class SanA : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		mT = PlayerSuvive.poL * 0.3f;
-		mP = PlayerPrefs.GetFloat ("Weight", 0)*8;
-		mC = (PlayerSuvive.poL - mT) - mP;
-		tran = PlayerSuvive.trans;
-		pro = PlayerSuvive.protein;
-		vit = PlayerSuvive.vin;
-		carbo = PlayerSuvive.car;
+	void Update () 
+	{
+		NumTran();
+		NumPro();
+		NumCarbo();
+		Nutrial();
 		trbar.value = tran;
 		Pbar.value = pro;
 		Vbar.value = vit;
@@ -53,4 +51,23 @@ public class SanA : MonoBehaviour {
 		}
 	}
 
+	public void NumTran() 
+	{
+		mT = PlayerSuvive.poL * 0.3f;
+	}
+	public void NumPro()
+	{
+		mP = PlayerPrefs.GetFloat("Weight", 0) * 8;
+	}
+	public void NumCarbo()
+	{
+		mC = (PlayerSuvive.poL - mT) - mP;
+	}
+	public void Nutrial()
+	{
+		tran = PlayerSuvive.trans;
+		pro = PlayerSuvive.protein;
+		vit = PlayerSuvive.vin;
+		carbo = PlayerSuvive.car;
+	}
 }
