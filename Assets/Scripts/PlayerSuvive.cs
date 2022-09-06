@@ -203,17 +203,18 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void ChangeColor_Weighter()
     {
-		if (pointP >= point && pointD <= point)
-		{
-
-			iM1.SetActive(true);
-			iM2.SetActive(false);
-		}
-		else
-		{
-			iM1.SetActive(false);
-			iM2.SetActive(true);
-		}
+		if (pointP >= point && pointD <= point){green_weight();}
+		else{red_weight();}
+	}
+	public void green_weight()
+    {
+		iM1.SetActive(true);
+		iM2.SetActive(false);
+	}
+	public void red_weight()
+    {
+		iM1.SetActive(false);
+		iM2.SetActive(true);
 	}
 	public void Die_Statement()
     {
