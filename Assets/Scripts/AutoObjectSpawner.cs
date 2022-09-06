@@ -47,11 +47,9 @@ public class AutoObjectSpawner : MonoBehaviour
 	void Update()
 	{
 		sc = PlayerSuvive.sc;
-		if (sc == 2 && lol == 0) 
-		{	SetActiveSpawn();
-			SetDesertScene();
-			ChangeCurrentSpeedByFloat(10);
-			lol = 1;		}
+		CheckDesertCondition();
+
+
 		if (sc == 3 && lol == 1) 
 		{	SetCrimsonScene();
 			ChangeCurrentSpeedByFloat(-10);
@@ -67,6 +65,17 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		StartCoroutine(SpawnObject());
 		StartCoroutine(Fast());
+	}
+
+	void CheckDesertCondition()
+	{
+		if (sc == 2 && lol == 0)
+		{
+			SetActiveSpawn();
+			SetDesertScene();
+			ChangeCurrentSpeedByFloat(10);
+			lol = 1;
+		}
 	}
 
 	void SetDesertScene()
