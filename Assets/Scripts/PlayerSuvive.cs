@@ -188,22 +188,19 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void Update_Ranking(string rankScorePlus,string rankNamePlus,string rankScore,string rankName,string rankScoreDe,string rankNameDe, int scoreLock)
     {
-        
-			if (scoreLock == 0)
-			{
-				if(rankScoreDe != "")
-                {
-					PlayerPrefs.SetFloat(rankScoreDe, PlayerPrefs.GetFloat(rankScore, 0));
-					PlayerPrefs.SetString(rankNameDe, PlayerPrefs.GetString(rankName, ""));
-				}
-				scoreLock = 1;
-			}
-			if (rankScorePlus == "" ||( time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0)))
-			{
-				PlayerPrefs.SetFloat(rankScore, time);
-				PlayerPrefs.SetString(rankName, name);
-			}
+			if (scoreLock == 0){if(rankScoreDe != ""){reset_HighScore(rankScoreDe,rankNameDe,rankScore,rankName);}scoreLock = 1;}
+			if (rankScorePlus == "" ||( time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0))){ set_HighScore(rankScore, rankName);}
     }
+	public void reset_HighScore(string rankScoreDe, string rankNameDe, string rankScore, string rankName)
+    {
+		PlayerPrefs.SetFloat(rankScoreDe, PlayerPrefs.GetFloat(rankScore, 0));
+		PlayerPrefs.SetString(rankNameDe, PlayerPrefs.GetString(rankName, ""));
+	}
+	public void set_HighScore(string rankScore,string rankName)
+    {
+		PlayerPrefs.SetFloat(rankScore, time);
+		PlayerPrefs.SetString(rankName, name);
+	}
 	public void ChangeColor_Weighter()
     {
 		if (pointP >= point && pointD <= point)
