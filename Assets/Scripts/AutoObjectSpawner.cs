@@ -48,12 +48,10 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		sc = PlayerSuvive.sc;
 		CheckDesertCondition();
+		CheckCrimsonCondition();
 
 
-		if (sc == 3 && lol == 1) 
-		{	SetCrimsonScene();
-			ChangeCurrentSpeedByFloat(-10);
-			lol = 0;		}
+
 		if (sc == 4 && lol == 0) 
 		{	SetCorruptScene();
 			ChangeCurrentSpeedByFloat(-5);
@@ -75,6 +73,16 @@ public class AutoObjectSpawner : MonoBehaviour
 			SetDesertScene();
 			ChangeCurrentSpeedByFloat(10);
 			lol = 1;
+		}
+	}
+
+	void CheckCrimsonCondition()
+	{
+		if (sc == 3 && lol == 1)
+		{
+			SetCrimsonScene();
+			ChangeCurrentSpeedByFloat(-10);
+			lol = 0;
 		}
 	}
 
