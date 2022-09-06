@@ -150,14 +150,10 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 
 	void Update() {
-
 		SettingValue();
 		ChangeColor_Weighter();
 		Die_Statement();
 		Ultimate();
-
-
-
 	}
 	public void SettingValue()
 	{
@@ -309,35 +305,17 @@ public class PlayerSuvive : MonoBehaviour {
 	
 
 	void OnCollisionEnter(Collision other){
+		object_group(other);
+		Doctor(other);
+		tutorialObject_group(other);
+	}
+
+	public void object_group(Collision other)
+    {
 		fat_group(other);
 		fruit_veget_group(other);
 		Mushroom_group(other);
 		Enemy_group(other);
-		Doctor(other);
-		tutorialObject_group(other);
-	}
-	public void Food_detail(Collision other,float point_plus,int Oil_plus,float trans_plus,float protein_plus,float car_plus,float vin_plus,string itemN_text,string itemP_text,string itemC_text,string itemO_text,string itemV_text,bool black_bool,bool I1_bool,bool I2_bool,bool I3_bool,bool I4_bool,bool I5_bool,bool I6_bool,bool I7_bool)
-    {
-		Destroy(other.gameObject);
-		point += point_plus;
-		PlayerMovementScript.oil += Oil_plus;
-		trans += trans_plus;
-		protein += protein_plus;
-		car += car_plus;
-		vin += vin_plus; 
-		itemN.text = itemN_text;
-		itemP.text = itemP_text;
-		itemC.text = itemC_text;
-		itemO.text = itemO_text;
-		itemV.text = itemV_text;
-		black.SetActive(black_bool);
-		itemI1.SetActive(I1_bool);
-		itemI2.SetActive(I2_bool);
-		itemI3.SetActive(I3_bool);
-		itemI4.SetActive(I4_bool);
-		itemI5.SetActive(I5_bool);
-		itemI6.SetActive(I6_bool);
-		itemI7.SetActive(I7_bool);
 	}
 	public void fat_group(Collision other)
     {
@@ -391,6 +369,37 @@ public class PlayerSuvive : MonoBehaviour {
 		mushD.SetActive(true);
 		hide.SetActive(true);
 		show_died_text();}
+	}
+	public void Food_detail(Collision other, float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus, string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text, bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
+	{
+		Destroy(other.gameObject);
+		plus_value(point_plus, Oil_plus, trans_plus, protein_plus, car_plus, vin_plus);
+		itemN.text = itemN_text;
+		itemP.text = itemP_text;
+		itemC.text = itemC_text;
+		itemO.text = itemO_text;
+		itemV.text = itemV_text;
+		black.SetActive(black_bool);
+		itemI1.SetActive(I1_bool);
+		itemI2.SetActive(I2_bool);
+		itemI3.SetActive(I3_bool);
+		itemI4.SetActive(I4_bool);
+		itemI5.SetActive(I5_bool);
+		itemI6.SetActive(I6_bool);
+		itemI7.SetActive(I7_bool);
+	}
+	public void plus_value(float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus)
+	{
+		point += point_plus;
+		PlayerMovementScript.oil += Oil_plus;
+		Nutrients_value(trans_plus, protein_plus, car_plus, vin_plus);
+	}
+	public void Nutrients_value(float trans_plus, float protein_plus, float car_plus, float vin_plus)
+    {
+		trans += trans_plus;
+		protein += protein_plus;
+		car += car_plus;
+		vin += vin_plus;
 	}
 	public void Enemy_group(Collision other)
     {
@@ -478,4 +487,5 @@ public class PlayerSuvive : MonoBehaviour {
 		yield return new WaitForSeconds(2);
 		show.SetActive(false);
 	}
+
 }
