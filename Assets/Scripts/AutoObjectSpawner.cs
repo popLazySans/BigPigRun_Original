@@ -51,16 +51,14 @@ public class AutoObjectSpawner : MonoBehaviour
 		{
 			SetActiveSpawn();
 
-			ChangeActiveGameObject(sound1, sound2);
-			cac.SetActive (true);
+			ChangeActiveGameObject(sound1, sound2);			
 			ChangeActiveGameObject(scene1, scene2);
+			cac.SetActive(true);
 
 
 			SetMaterialColor(249, 255, 50, 20);
 
-			ChangeSpeed(fast, 10);
-			ChangeSpeed(slow, 10);
-
+			ChangeCurrentSpeedByFloat(10);
 			lol = 1;
 		}
 		if (sc == 3 && lol == 1) 
@@ -69,9 +67,7 @@ public class AutoObjectSpawner : MonoBehaviour
 			cac.SetActive (false);
 			SetMaterialColor(255, 49, 49, 1);
 
-			ChangeSpeed(fast, -10);
-			ChangeSpeed(slow, -10);
-
+			ChangeCurrentSpeedByFloat(-10);
 			lol = 0;
 		}
 		if (sc == 4 && lol == 0) 
@@ -82,11 +78,9 @@ public class AutoObjectSpawner : MonoBehaviour
 
 			SetMaterialColor(81, 31, 106, 1);
 
-			ChangeSpeed(fast, -5);
-			ChangeSpeed(slow, -5);
+			ChangeCurrentSpeedByFloat(-5);
 
-			cas1.SetActive (false);
-			cas2.SetActive (true);
+			ChangeActiveGameObject(cas1, cas2);
 			of.SetActive(true);
 			lol = 1;
 
@@ -114,6 +108,11 @@ public class AutoObjectSpawner : MonoBehaviour
 	void SetMaterialColor(byte r, byte g, byte b, byte a)
 	{
 		col.material.SetColor("_Color", new Color32(r, g, b, a));
+	}
+	void ChangeCurrentSpeedByFloat(float speed)
+	{
+		ChangeSpeed(fast, speed);
+		ChangeSpeed(slow, speed);
 	}
 
 	float ChangeSpeed(float currentSpeed ,float speed)
