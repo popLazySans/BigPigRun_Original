@@ -374,19 +374,8 @@ public class PlayerSuvive : MonoBehaviour {
 	{
 		Destroy(other.gameObject);
 		plus_value(point_plus, Oil_plus, trans_plus, protein_plus, car_plus, vin_plus);
-		itemN.text = itemN_text;
-		itemP.text = itemP_text;
-		itemC.text = itemC_text;
-		itemO.text = itemO_text;
-		itemV.text = itemV_text;
-		black.SetActive(black_bool);
-		itemI1.SetActive(I1_bool);
-		itemI2.SetActive(I2_bool);
-		itemI3.SetActive(I3_bool);
-		itemI4.SetActive(I4_bool);
-		itemI5.SetActive(I5_bool);
-		itemI6.SetActive(I6_bool);
-		itemI7.SetActive(I7_bool);
+		Set_item_text(itemN_text,itemP_text,itemC_text,itemO_text,itemV_text);
+		Set_item_active(black_bool,I1_bool,I2_bool,I3_bool,I4_bool,I5_bool,I6_bool,I7_bool);
 	}
 	public void plus_value(float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus)
 	{
@@ -401,6 +390,19 @@ public class PlayerSuvive : MonoBehaviour {
 		car += car_plus;
 		vin += vin_plus;
 	}
+	public void Set_item_text(string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text) 
+	{
+		itemN.text = itemN_text;
+		itemP.text = itemP_text;
+		itemC.text = itemC_text;
+		itemO.text = itemO_text;
+		itemV.text = itemV_text;
+	}
+	public void Set_item_active(bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
+    {
+		black.SetActive(black_bool);itemI1.SetActive(I1_bool);itemI2.SetActive(I2_bool);itemI3.SetActive(I3_bool);itemI4.SetActive(I4_bool);itemI5.SetActive(I5_bool);itemI6.SetActive(I6_bool);itemI7.SetActive(I7_bool);
+	}
+
 	public void Enemy_group(Collision other)
     {
 		Bird(other);
