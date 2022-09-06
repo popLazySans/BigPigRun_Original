@@ -174,77 +174,36 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void HightScore_Current()
     {
-		if (time > PlayerPrefs.GetFloat("HighScore5", 0))
-		{
-			if (sCoreLock5 == 0)
-			{
-
-				sCoreLock5 = 1;
-			}
-			if (time > PlayerPrefs.GetFloat("HighScore5", 0) && time < PlayerPrefs.GetFloat("HighScore4", 0))
-			{
-				PlayerPrefs.SetFloat("HighScore5", time);
-				PlayerPrefs.SetString("Namest5", name);
-
-			}
-			if (time > PlayerPrefs.GetFloat("HighScore4", 0))
-			{
-
-				if (sCoreLock4 == 0)
-				{
-					PlayerPrefs.SetFloat("HighScore5", PlayerPrefs.GetFloat("HighScore4", 0));
-					PlayerPrefs.SetString("Namest5", PlayerPrefs.GetString("Namest4", ""));
-					sCoreLock4 = 1;
-
-				}
-				if (time > PlayerPrefs.GetFloat("HighScore4", 0) && time < PlayerPrefs.GetFloat("HighScore3", 0))
-				{
-					PlayerPrefs.SetFloat("HighScore4", time);
-					PlayerPrefs.SetString("Namest4", name);
-				}
-				if (time > PlayerPrefs.GetFloat("HighScore3", 0))
-				{
-					if (sCoreLock3 == 0)
-					{
-						PlayerPrefs.SetFloat("HighScore4", PlayerPrefs.GetFloat("HighScore3", 0));
-						PlayerPrefs.SetString("Namest4", PlayerPrefs.GetString("Namest3", ""));
-						sCoreLock3 = 1;
-
-					}
-					if (time > PlayerPrefs.GetFloat("HighScore3", 0) && time < PlayerPrefs.GetFloat("HighScore2", 0))
-					{
-						PlayerPrefs.SetFloat("HighScore3", time);
-						PlayerPrefs.SetString("Namest3", name);
-					}
-					if (time > PlayerPrefs.GetFloat("HighScore2", 0))
-					{
-						if (sCoreLock2 == 0)
-						{
-							PlayerPrefs.SetFloat("HighScore3", PlayerPrefs.GetFloat("HighScore2", 0));
-							PlayerPrefs.SetString("Namest3", PlayerPrefs.GetString("Namest2", ""));
-							sCoreLock2 = 1;
-						}
-						if (time > PlayerPrefs.GetFloat("HighScore2", 0) && time < PlayerPrefs.GetFloat("HighScore1", 0))
-						{
-							PlayerPrefs.SetFloat("HighScore2", time);
-							PlayerPrefs.SetString("Namest2", name);
-						}
-						if (time > PlayerPrefs.GetFloat("HighScore1", 0))
-						{
-							if (sCoreLock1 == 0)
-							{
-								PlayerPrefs.SetFloat("HighScore2", PlayerPrefs.GetFloat("HighScore1", 0));
-								PlayerPrefs.SetString("Namest2", PlayerPrefs.GetString("Namest1", ""));
-								sCoreLock1 = 1;
-							}
-							PlayerPrefs.SetFloat("HighScore1", time);
-							PlayerPrefs.SetString("Namest1", name);
-						}
-					}
-				}
-			}
-		}
+		Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1",sCoreLock5,sCoreLock4,sCoreLock3,sCoreLock2,sCoreLock1);
 	}
+	public void Rank_Checker( string rankScore5, string rankName5, string rankScore4, string rankName4, string rankScore3, string rankName3, string rankScore2, string rankName2, string rankScore1, string rankName1 ,int scoreLock5, int scoreLock4, int scoreLock3, int scoreLock2,int scoreLock1)
+    {
+		if (time > PlayerPrefs.GetFloat(rankScore5, 0)) { Update_Ranking(rankScore4,rankName4,rankScore5,rankName5,"","",scoreLock5);
+            if (time > PlayerPrefs.GetFloat(rankScore4, 0)) { Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
+				if (time > PlayerPrefs.GetFloat(rankScore3, 0)){Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
+					if (time > PlayerPrefs.GetFloat(rankScore2, 0)){Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
+						if (time > PlayerPrefs.GetFloat(rankScore1, 0)){Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1);}}}}
+	}
+
+	}
+	public void Update_Ranking(string rankScorePlus,string rankNamePlus,string rankScore,string rankName,string rankScoreDe,string rankNameDe, int scoreLock)
+    {
+        
+			if (scoreLock == 0)
+			{
+				if(rankScoreDe != "")
+                {
+					PlayerPrefs.SetFloat(rankScoreDe, PlayerPrefs.GetFloat(rankScore, 0));
+					PlayerPrefs.SetString(rankNameDe, PlayerPrefs.GetString(rankName, ""));
+				}
+				scoreLock = 1;
+			}
+			if (rankScorePlus == "" ||( time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0)))
+			{
+				PlayerPrefs.SetFloat(rankScore, time);
+				PlayerPrefs.SetString(rankName, name);
+			}
+    }
 	public void ChangeColor_Weighter()
     {
 		if (pointP >= point && pointD <= point)
