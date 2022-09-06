@@ -43,10 +43,6 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		boxCollider2D = GetComponent<BoxCollider>();
 		StartGameCoroutine();
-
-
-
-
 	}
 	void Update()
 	{
@@ -63,8 +59,9 @@ public class AutoObjectSpawner : MonoBehaviour
 
 			SetMaterialColor(249, 255, 50, 20);
 
-			fast = fast + 10;
-			slow = slow + 18;
+			ChangeSpeed(fast, 10);
+			ChangeSpeed(slow, 10);
+
 			lol = 1;
 		}
 		if (sc == 3 && lol == 1) 
@@ -77,8 +74,9 @@ public class AutoObjectSpawner : MonoBehaviour
 
 			SetMaterialColor(255, 49, 49, 1);
 
-			fast = fast - 10;
-			slow = slow - 10;
+			ChangeSpeed(fast, -10);
+			ChangeSpeed(slow, -10);
+
 			lol = 0;
 		}
 		if (sc == 4 && lol == 0) 
@@ -90,8 +88,9 @@ public class AutoObjectSpawner : MonoBehaviour
 
 			SetMaterialColor(81, 31, 106, 1);
 
-			fast = fast -5;
-			slow = slow -5;
+			ChangeSpeed(fast, -5);
+			ChangeSpeed(slow, -5);
+
 			cas1.SetActive (false);
 			cas2.SetActive (true);
 			of.SetActive(true);
@@ -111,6 +110,11 @@ public class AutoObjectSpawner : MonoBehaviour
 		col.material.SetColor("_Color", new Color32(r, g, b, a));
 	}
 
+	float ChangeSpeed(float currentSpeed ,float speed)
+	{
+		float newSpeed= currentSpeed + speed;
+		return newSpeed;
+	}
 
 
 	// This will spawn an object, and then wait some time, then spawn another...
@@ -123,7 +127,6 @@ public class AutoObjectSpawner : MonoBehaviour
 					yield return new WaitForSeconds (Random.Range (fast, slow));
 					// Generate the new object
 					GameObject newObject = GenerateNewObject();
-
 					yield return new WaitForSeconds (10f);
 					Destroy (newObject);
 					// Wait for some time before spawning another object
