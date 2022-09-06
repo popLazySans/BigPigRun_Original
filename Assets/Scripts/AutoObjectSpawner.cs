@@ -58,9 +58,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		}
 		if (sc == 3 && lol == 1) 
 		{
-			ChangeActiveGameObject(sound2, sound3);
-			cac.SetActive (false);
-			SetMaterialColor(255, 49, 49, 1);
+			SetDesertScene();
 
 			ChangeCurrentSpeedByFloat(-10);
 			lol = 0;
@@ -94,6 +92,13 @@ public class AutoObjectSpawner : MonoBehaviour
 		ChangeActiveGameObject(scene1, scene2);
 		cac.SetActive(true);
 		SetMaterialColor(249, 255, 50, 20);
+	}
+
+	void SetDesertScene()
+	{
+		ChangeActiveGameObject(sound2, sound3);
+		cac.SetActive(false);
+		SetMaterialColor(255, 49, 49, 1);
 	}
 
 	void SetActiveSpawn()
