@@ -69,56 +69,56 @@ public class PlayerSuvive : MonoBehaviour {
 	public int sCoreLock5;
 
 	public static int sc = 1;
-	void Start () {
-		StartCoroutine (count ());
+	void Start() {
+		StartCoroutine(count());
 		SetHighScore();
 		SetAppearance();
 		checkGender();
 		SetCal();
 	}
 	public void SetHighScore()
-    {
+	{
 		highScore.text = "Best Score " + PlayerPrefs.GetFloat("HighScore1", 0).ToString() + " km";
 	}
 	public void SetAppearance()
-    {
-		gen =  SetGender();
+	{
+		gen = SetGender();
 		age = SetAge();
 		height = SetHeight();
 		weight = SetWeight();
 		name = SetName();
-    }
+	}
 	public int SetGender()
-    {
-		int gender =  PlayerPrefs.GetInt("Gender",0);
+	{
+		int gender = PlayerPrefs.GetInt("Gender", 0);
 		return gender;
-    }
+	}
 	public int SetAge()
 	{
-		int age = PlayerPrefs.GetInt("Age",0);
+		int age = PlayerPrefs.GetInt("Age", 0);
 		return age;
 	}
 	public float SetHeight()
-    {
-		float height = PlayerPrefs.GetFloat("Height",0);
+	{
+		float height = PlayerPrefs.GetFloat("Height", 0);
 		return height;
 	}
 	public float SetWeight()
-    {
+	{
 		float weight = PlayerPrefs.GetFloat("weight", 0);
 		return weight;
 	}
 	public string SetName()
-    {
+	{
 		string name = PlayerPrefs.GetString("Name", "");
 		return name;
 	}
 	public void checkGender()
-    {
+	{
 		if (gen == 1) { Man_Calculator(); }
-		if (gen == 2){ Woman_Calculator(); }
+		if (gen == 2) { Woman_Calculator(); }
 	}
-	public void Man_Calculator() 
+	public void Man_Calculator()
 	{
 		point = ((10f * height) + (6.25f * weight) - (5f * age) + 5f) * 1.2f;
 	}
@@ -127,154 +127,142 @@ public class PlayerSuvive : MonoBehaviour {
 		point = ((10f * height) + (6.25f * weight) - (5f * age) - 161f) * 1.2f;
 	}
 	public void SetCal()
-    {
+	{
 		poL = point;
 		SetLowandHightCal();
 		SetCalText();
 		SetCalBar();
 	}
 	public void SetLowandHightCal()
-    {
+	{
 		pointP = point + 250;
 		pointD = point - 250;
 	}
 	public void SetCalText()
-    {
+	{
 		low.text = "Low Cal :" + pointD.ToString();
 		high.text = "High Cal :" + pointP.ToString();
 	}
 	public void SetCalBar()
-    {
+	{
 		bar.minValue = pointD;
 		bar.maxValue = pointP;
 	}
 
-	void Update () {
+	void Update() {
 
 		SettingValue();
 		ChangeColor_Weighter();
 		Die_Statement();
 		Ultimate();
 
-	
-		
+
+
 	}
 	public void SettingValue()
-    {
+	{
 		down = time2 / 7700f;
 		HightScore_Current();
 		SetValueToPoint();
 		Set_Nutrients_text();
 	}
 	public void SetValueToPoint()
-    {
+	{
 		bar.value = point;
 		pon = point;
 		PlayerMovementScript.pot = point;
 	}
 	public void HightScore_Current()
-    {
-		Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1",sCoreLock5,sCoreLock4,sCoreLock3,sCoreLock2,sCoreLock1);
+	{
+		Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1", sCoreLock5, sCoreLock4, sCoreLock3, sCoreLock2, sCoreLock1);
 	}
-	public void Rank_Checker( string rankScore5, string rankName5, string rankScore4, string rankName4, string rankScore3, string rankName3, string rankScore2, string rankName2, string rankScore1, string rankName1 ,int scoreLock5, int scoreLock4, int scoreLock3, int scoreLock2,int scoreLock1)
-    {
-		if (time > PlayerPrefs.GetFloat(rankScore5, 0)) { Update_Ranking(rankScore4,rankName4,rankScore5,rankName5,"","",scoreLock5);
-            if (time > PlayerPrefs.GetFloat(rankScore4, 0)) { Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
-				if (time > PlayerPrefs.GetFloat(rankScore3, 0)){Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
-					if (time > PlayerPrefs.GetFloat(rankScore2, 0)){Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
-						if (time > PlayerPrefs.GetFloat(rankScore1, 0)){Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1);}}}}
-	}
+	public void Rank_Checker(string rankScore5, string rankName5, string rankScore4, string rankName4, string rankScore3, string rankName3, string rankScore2, string rankName2, string rankScore1, string rankName1, int scoreLock5, int scoreLock4, int scoreLock3, int scoreLock2, int scoreLock1)
+	{
+		if (time > PlayerPrefs.GetFloat(rankScore5, 0)) { Update_Ranking(rankScore4, rankName4, rankScore5, rankName5, "", "", scoreLock5);
+			if (time > PlayerPrefs.GetFloat(rankScore4, 0)) { Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
+				if (time > PlayerPrefs.GetFloat(rankScore3, 0)) { Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
+					if (time > PlayerPrefs.GetFloat(rankScore2, 0)) { Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
+						if (time > PlayerPrefs.GetFloat(rankScore1, 0)) { Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1); } } } }
+		}
 
 	}
-	public void Update_Ranking(string rankScorePlus,string rankNamePlus,string rankScore,string rankName,string rankScoreDe,string rankNameDe, int scoreLock)
-    {
-			if (scoreLock == 0){if(rankScoreDe != ""){reset_HighScore(rankScoreDe,rankNameDe,rankScore,rankName);}scoreLock = 1;}
-			if (rankScorePlus == "" ||( time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0))){ set_HighScore(rankScore, rankName);}
-    }
+	public void Update_Ranking(string rankScorePlus, string rankNamePlus, string rankScore, string rankName, string rankScoreDe, string rankNameDe, int scoreLock)
+	{
+		if (scoreLock == 0) { if (rankScoreDe != "") { reset_HighScore(rankScoreDe, rankNameDe, rankScore, rankName); } scoreLock = 1; }
+		if (rankScorePlus == "" || (time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0))) { set_HighScore(rankScore, rankName); }
+	}
 	public void reset_HighScore(string rankScoreDe, string rankNameDe, string rankScore, string rankName)
-    {
+	{
 		PlayerPrefs.SetFloat(rankScoreDe, PlayerPrefs.GetFloat(rankScore, 0));
 		PlayerPrefs.SetString(rankNameDe, PlayerPrefs.GetString(rankName, ""));
 	}
-	public void set_HighScore(string rankScore,string rankName)
-    {
+	public void set_HighScore(string rankScore, string rankName)
+	{
 		PlayerPrefs.SetFloat(rankScore, time);
 		PlayerPrefs.SetString(rankName, name);
 	}
 	public void ChangeColor_Weighter()
-    {
-		if (pointP >= point && pointD <= point){green_weight();}
-		else{red_weight();}
+	{
+		if (pointP >= point && pointD <= point) { green_weight(); }
+		else { red_weight(); }
 	}
 	public void green_weight()
-    {
+	{
 		iM1.SetActive(true);
 		iM2.SetActive(false);
 	}
 	public void red_weight()
-    {
+	{
 		iM1.SetActive(false);
 		iM2.SetActive(true);
 	}
 	public void Die_Statement()
-    {
+	{
 		Hungry();
 		Fatty();
 		Doctor_Denied();
-    }
+	}
 	public void Hungry()
-    {
+	{
 		if (point <= 0)
-		{
-			hungry.SetActive(true);
+		{ hungry.SetActive(true);
 			hide.SetActive(true);
-			//show.SetActive (true);
-			//show.GetComponent<Text>().text = "You are weakness";
-			tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
-			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive(false);
-			Time.timeScale = 0;
-			itemN.text = "";
-			itemP.text = "";
-			itemC.text = "";
-			itemO.text = "";
-			itemV.text = "";
-			black.SetActive(false);
-			itemI1.SetActive(false);
-			itemI2.SetActive(false);
-			itemI3.SetActive(false);
-			itemI4.SetActive(false);
-			itemI5.SetActive(false);
-			itemI6.SetActive(false);
-			itemI7.SetActive(false);
-		}
+			show_died_text(); }
 	}
 	public void Fatty()
-    {
+	{
 		if (sanCheck == 1)
-		{
-			hide.SetActive(true);
+		{ hide.SetActive(true);
 			fatty.SetActive(true);
-			tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
-			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive(false);
-			itemN.text = "";
-			itemP.text = "";
-			itemC.text = "";
-			itemO.text = "";
-			itemV.text = "";
-			black.SetActive(false);
-			itemI1.SetActive(false);
-			itemI2.SetActive(false);
-			itemI3.SetActive(false);
-			itemI4.SetActive(false);
-			itemI5.SetActive(false);
-			itemI6.SetActive(false);
-			itemI7.SetActive(false);
-			Time.timeScale = 0;
-		}
+			show_died_text();
+			Time.timeScale = 0; }
+	}
+	public void show_died_text()
+	{
+		Summary_text();
+		antiP.SetActive(false);
+		Time.timeScale = 0;
+		Item_text();
+		Set_item_object();
+	}
+	public void Summary_text()
+	{
+		tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
+		tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
+		tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
+	}
+	public void Item_text ()
+	{
+		itemN.text = "";
+		itemP.text = "";
+		itemC.text = "";
+		itemO.text = "";
+		itemV.text = "";
+	}
+	public void Set_item_object()
+    {
+		black.SetActive(false);
+		itemI1.SetActive(false);itemI2.SetActive(false);itemI3.SetActive(false);itemI4.SetActive(false);itemI5.SetActive(false);itemI6.SetActive(false);itemI7.SetActive(false);
 	}
 	public void Doctor_Denied()
     {
@@ -294,23 +282,23 @@ public class PlayerSuvive : MonoBehaviour {
 	public void Ultimate()
     {
 		if (SanA.lockPoint == 1)
-		{
-			point = poL;
-			SanA.lockPoint = 0;
-		}
+		{point = poL;
+		SanA.lockPoint = 0;}
 	}
 	IEnumerator count()
 	{
 		while (true) {
 			yield return new WaitForSeconds (one);
-			time += 0.014f;
-			time2 += 1;
-			point -= 1f;
-			if (sc == 3 && one == 1) {
-				one = (one) / 3;
-			}
+			count_calculate();
+			if (sc == 3 && one == 1) {one = (one) / 3;}
 		}
-			}
+	}
+	public void count_calculate()
+    {
+		time += 0.014f;
+		time2 += 1;
+		point -= 1f;
+	}
 	IEnumerator countFive()
 	{
 		yield return new WaitForSeconds (15);
