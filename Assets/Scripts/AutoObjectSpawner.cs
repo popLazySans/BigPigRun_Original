@@ -51,12 +51,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		{
 			SetActiveSpawn();
 
-			ChangeActiveGameObject(sound1, sound2);			
-			ChangeActiveGameObject(scene1, scene2);
-			cac.SetActive(true);
-
-
-			SetMaterialColor(249, 255, 50, 20);
+			SetDefaultScene();
 
 			ChangeCurrentSpeedByFloat(10);
 			lol = 1;
@@ -91,6 +86,14 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		StartCoroutine(SpawnObject());
 		StartCoroutine(Fast());
+	}
+
+	void SetDefaultScene()
+	{
+		ChangeActiveGameObject(sound1, sound2);
+		ChangeActiveGameObject(scene1, scene2);
+		cac.SetActive(true);
+		SetMaterialColor(249, 255, 50, 20);
 	}
 
 	void SetActiveSpawn()
