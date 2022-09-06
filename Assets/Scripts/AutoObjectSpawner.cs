@@ -49,8 +49,8 @@ public class AutoObjectSpawner : MonoBehaviour
 		sc = PlayerSuvive.sc;
 		if (sc == 2 && lol == 0) 
 		{
-			spawn1.SetActive (true);
-			spawn2.SetActive (true);
+			SetActiveSpawn();
+
 			sound1.SetActive (false);
 			sound2.SetActive (true);
 			cac.SetActive (true);
@@ -103,6 +103,12 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		StartCoroutine(SpawnObject());
 		StartCoroutine(Fast());
+	}
+
+	void SetActiveSpawn()
+	{
+		spawn1.SetActive(true);
+		spawn2.SetActive(true);
 	}
 
 	void SetMaterialColor(byte r, byte g, byte b, byte a)
