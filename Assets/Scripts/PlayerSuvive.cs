@@ -237,6 +237,21 @@ public class PlayerSuvive : MonoBehaviour {
 			show_died_text();
 			Time.timeScale = 0; }
 	}
+	public void Doctor_Denied()
+	{
+		if (AutoObjectSpawnerLock.die == 1)
+		{
+			StartCoroutine(countFive());
+		}
+	}
+	IEnumerator countFive()
+	{
+		yield return new WaitForSeconds(15);
+		if (AutoObjectSpawnerLock.die == 1)
+		{hide.SetActive(true);
+		anDoc.SetActive(true);
+		show_died_text();}
+	}
 	public void show_died_text()
 	{
 		Summary_text();
@@ -264,13 +279,7 @@ public class PlayerSuvive : MonoBehaviour {
 		black.SetActive(false);
 		itemI1.SetActive(false);itemI2.SetActive(false);itemI3.SetActive(false);itemI4.SetActive(false);itemI5.SetActive(false);itemI6.SetActive(false);itemI7.SetActive(false);
 	}
-	public void Doctor_Denied()
-    {
-		if (AutoObjectSpawnerLock.die == 1)
-		{
-			StartCoroutine(countFive());
-		}
-	}
+	
 	public void Set_Nutrients_text()
     {
 		proBar.text = "Protein " + protein.ToString() + " kCal";
@@ -290,8 +299,7 @@ public class PlayerSuvive : MonoBehaviour {
 		while (true) {
 			yield return new WaitForSeconds (one);
 			count_calculate();
-			if (sc == 3 && one == 1) {one = (one) / 3;}
-		}
+			if (sc == 3 && one == 1) {one = (one) / 3;}}
 	}
 	public void count_calculate()
     {
@@ -299,215 +307,22 @@ public class PlayerSuvive : MonoBehaviour {
 		time2 += 1;
 		point -= 1f;
 	}
-	IEnumerator countFive()
-	{
-		yield return new WaitForSeconds (15);
-		if (AutoObjectSpawnerLock.die == 1) 
-		{
-			hide.SetActive (true);
-			anDoc.SetActive (true);
-			tex.GetComponent<Text>().text ="You get score " + time.ToString() + " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is "+time2.ToString() + " kcal";
-			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive (false);
-			Time.timeScale = 0;
-			itemN.text = "";
-			itemP.text = "";
-			itemC.text = "";
-			itemO.text = "";
-			itemV.text = "";
-			black.SetActive (false);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
 
-	}
-	IEnumerator twoSec()
-	{
-		yield return new WaitForSeconds (2);
-		show.SetActive (false);
-	}
+	
 
 	void OnCollisionEnter(Collision other){
-		if (other.gameObject.tag == "Burger") {
-			Destroy (other.gameObject);
-			point += 885;
-			PlayerMovementScript.oil += 2;
-			trans += 378;
-			protein += 204;
-			car += 288;
-			itemN.text = "885 kCal";
-			itemP.text = "Protein 204 kCal";
-			itemC.text = "Carbohydrate 288 kCal";
-			itemO.text = "Fat 378 kCal";
-			itemV.text = "Vitamin 0 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (true);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Chicken") {
-			Destroy (other.gameObject);
-			point += 738;
-			PlayerMovementScript.oil += 1;
-			trans += 324;
-			protein += 360;
-			car += 22;
-			itemN.text = "738 kCal";
-			itemP.text = "Protein 360 kCal";
-			itemC.text = "Carbohydrate 22 kCal";
-			itemO.text = "Fat 324 kCal";
-			itemV.text = "Vitamin 0 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (true);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Pineapple") {
-			Destroy (other.gameObject);
-			point += 150;
-			trans += 3;
-			car += 156;
-			protein += 6;
-			vin += 3;
-			itemN.text = "150 kCal";
-			itemP.text = "Protein 6 kCal";
-			itemC.text = "Carbohydrate 156 kCal";
-			itemO.text = "Fat 3 kCal";
-			itemV.text = "Vitamin 3 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (true);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Salad") {
-			Destroy (other.gameObject);
-			point += 61;
-			trans += 5;
-			car += 52;
-			protein += 12;
-			vin += 10;
-			PlayerMovementScript.oil -= 2;
-			itemN.text = "61 kCal";
-			itemP.text = "Protein 12 kCal";
-			itemC.text = "Carbohydrate 52 kCal";
-			itemO.text = "Fat 5 kCal";
-			itemV.text = "Vitamin 10 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (true);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Rice") {
-			Destroy (other.gameObject);
-			point += 390;
-			trans += 8;
-			car += 336;
-			protein += 32;
-			vin += 5;
-			itemN.text = "390 kCal";
-			itemP.text = "Protein 32 kCal";
-			itemC.text = "Carbohydrate 336 kCal";
-			itemO.text = "Fat 8 kCal";
-			itemV.text = "Vitamin 0 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (true);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Watermelon") {
-			Destroy (other.gameObject);
-			point += 91;
-			car += 96;
-			trans += 5;
-			protein += 7;
-			vin += 2;
-			itemN.text = "91 kCal";
-			itemP.text = "Protein 7 kCal";
-			itemC.text = "Carbohydrate 96 kCal";
-			itemO.text = "Fat 5 kCal";
-			itemV.text = "Vitamin 2 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (true);
-			itemI7.SetActive (false);
-		}
-		if (other.gameObject.tag == "Mushroom1") {
-			Destroy (other.gameObject);
-			PlayerMovementScript.oil -= 1;
-			point += 67;
-			trans += 8;
-			car += 40;
-			protein += 37;
-			vin += 5;
-			itemN.text = "67 kCal";
-			itemP.text = "Protein 37 kCal";
-			itemC.text = "Carbohydrate 40 kCal";
-			itemO.text = "Fat 8 kCal";
-			itemV.text = "Vitamin 5 Energy";
-			black.SetActive (true);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (true);
-
-		}
+		if (other.gameObject.tag == "Burger") {Food_detail(other,885,2,378,204,288,0, "885 kCal", "Protein 204 kCal", "Carbohydrate 288 kCal", "Fat 378 kCal", "Vitamin 0 Energy",true,true,false,false,false,false,false,false);}
+		if (other.gameObject.tag == "Chicken") {Food_detail(other,738,1,324,360,22,0, "738 kCal", "Protein 360 kCal", "Carbohydrate 22 kCal", "Fat 324 kCal", "Vitamin 0 Energy",true,false,true,false,false,false,false,false);}
+		if (other.gameObject.tag == "Pineapple") {Food_detail(other,150,0,3,6,156,3, "150 kCal", "Protein 6 kCal", "Carbohydrate 156 kCal", "Fat 3 kCal", "Vitamin 3 Energy",true,false,false,true,false,false,false,false);}
+		if (other.gameObject.tag == "Salad") {Food_detail(other, 61, -2, 5, 12, 52, 10, "61 kCal", "Protein 12 kCal", "Carbohydrate 52 kCal", "Fat 5 kCal", "Vitamin 10 Energy", true, false, false, false, true, false, false, false);}
+		if (other.gameObject.tag == "Rice") {Food_detail(other, 390, 0, 8, 32, 336, 5, "390 kCal", "Protein 32 kCal", "Carbohydrate 336 kCal", "Fat 8 kCal", "Vitamin 0 Energy", true, false, false, false, false, true, false, false);}
+		if (other.gameObject.tag == "Watermelon") {Food_detail(other, 91, 0, 5, 7, 96, 2, "91 kCal", "Protein 7 kCal", "Carbohydrate 96 kCal", "Fat 5 kCal", "Vitamin 2 Energy", true, false, false, false, false, false, true, false);}
+		if (other.gameObject.tag == "Mushroom1") {Food_detail(other,67,-1,8,37,40,5, "67 kCal", "Protein 37 kCal", "Carbohydrate 40 kCal", "Fat 8 kCal", "Vitamin 5 Energy",true,false,false,false,false,false,false,true);}
 		if (other.gameObject.tag == "Mushroom2") {
 			Destroy (other.gameObject);
 			mushD.SetActive (true);
 			hide.SetActive (true);
-			//show.SetActive (true);
-			//show.GetComponent<Text>().text = "You eat poison mushroom!!!";
-			tex.GetComponent<Text> ().text = "You get score " + time.ToString ()+ " km";
-			tex2.GetComponent<Text>().text = "Total amount of burns is "+time2.ToString() + " kcal";
-			tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-			antiP.SetActive (false);
-			itemN.text = "";
-			itemP.text = "";
-			itemC.text = "";
-			itemO.text = "";
-			itemV.text = "";
-			black.SetActive (false);
-			itemI1.SetActive (false);
-			itemI2.SetActive (false);
-			itemI3.SetActive (false);
-			itemI4.SetActive (false);
-			itemI5.SetActive (false);
-			itemI6.SetActive (false);
-			itemI7.SetActive (false);
-			Time.timeScale = 0;
+			show_died_text();
 		}
 		if (other.gameObject.tag == "Enemy") {
 			Destroy (other.gameObject);
@@ -537,31 +352,10 @@ public class PlayerSuvive : MonoBehaviour {
 				car = 0;
 			} else {
 				show.SetActive (false);
-				tex.GetComponent<Text> ().text = "You get score " + time.ToString ()+ " km";
-				tex2.GetComponent<Text>().text = "Total amount of burns is "+time2.ToString() + " kcal";
-				tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
-				docty.SetActive (true);
-				hide.SetActive (true);
-				antiP.SetActive (false);
-				itemN.text = "";
-				itemP.text = "";
-				itemC.text = "";
-				itemO.text = "";
-				itemV.text = "";
-				black.SetActive (false);
-				itemI1.SetActive (false);
-				itemI2.SetActive (false);
-				itemI3.SetActive (false);
-				itemI4.SetActive (false);
-				itemI5.SetActive (false);
-				itemI6.SetActive (false);
-				itemI7.SetActive (false);
-				Time.timeScale = 0;
-
+				docty.SetActive(true);
+				hide.SetActive(true);
+				show_died_text();
 			}
-
-
-
 			StartCoroutine (twoSec ());
 			Destroy (other.gameObject);
 		}
@@ -573,7 +367,6 @@ public class PlayerSuvive : MonoBehaviour {
 				sc += 1;
 				twothor = 2;
 			} else {
-				//show.GetComponent<Text>().text = "ไม่ผ่านเกณฑ์";
 				tex.GetComponent<Text> ().text = "You get score " + time.ToString ();
 				docty.SetActive (true);
 				hide.SetActive (true);
@@ -584,5 +377,33 @@ public class PlayerSuvive : MonoBehaviour {
 			StartCoroutine (twoSec ());
 			Destroy (other.gameObject);
 		}
+	}
+	public void Food_detail(Collision other,float point_plus,int Oil_plus,float trans_plus,float protein_plus,float car_plus,float vin_plus,string itemN_text,string itemP_text,string itemC_text,string itemO_text,string itemV_text,bool black_bool,bool I1_bool,bool I2_bool,bool I3_bool,bool I4_bool,bool I5_bool,bool I6_bool,bool I7_bool)
+    {
+		Destroy(other.gameObject);
+		point += point_plus;
+		PlayerMovementScript.oil += Oil_plus;
+		trans += trans_plus;
+		protein += protein_plus;
+		car += car_plus;
+		vin += vin_plus; 
+		itemN.text = itemN_text;
+		itemP.text = itemP_text;
+		itemC.text = itemC_text;
+		itemO.text = itemO_text;
+		itemV.text = itemV_text;
+		black.SetActive(black_bool);
+		itemI1.SetActive(I1_bool);
+		itemI2.SetActive(I2_bool);
+		itemI3.SetActive(I3_bool);
+		itemI4.SetActive(I4_bool);
+		itemI5.SetActive(I5_bool);
+		itemI6.SetActive(I6_bool);
+		itemI7.SetActive(I7_bool);
+	}
+	IEnumerator twoSec()
+	{
+		yield return new WaitForSeconds(2);
+		show.SetActive(false);
 	}
 }
