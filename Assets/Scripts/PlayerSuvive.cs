@@ -437,6 +437,10 @@ public class PlayerSuvive : MonoBehaviour {
     {
 		show.SetActive(true);
 		show.GetComponent<Text>().text = "Complete";
+		Doctor_reset_value();
+	}
+	public void Doctor_reset_value()
+    {
 		Dc = 0;
 		sc += 1;
 		trans = 0;
@@ -471,27 +475,29 @@ public class PlayerSuvive : MonoBehaviour {
 	public void redMush_test(Collision other) 
 	{
 		if (other.gameObject.tag == "Test2")
-		{
-			show.SetActive(true);
-			AutoObjectSpawnerLock.die = 0;
-			if (point >= pointD && point <= pointP)
-			{
-				Dc = 0;
-				sc += 1;
-				twothor = 2;
-			}
-			else
-			{
-				tex.GetComponent<Text>().text = "You get score " + time.ToString();
-				docty.SetActive(true);
-				hide.SetActive(true);
-				antiP.SetActive(false);
-				Time.timeScale = 0;
-
-			}
-			StartCoroutine(twoSec());
-			Destroy(other.gameObject);
-		}
+		{show.SetActive(true);
+		AutoObjectSpawnerLock.die = 0;
+		tutorial_doctor_check();
+		prepare_to_nextwave(other);}
+	}
+	public void tutorial_doctor_check()
+    {
+		if (point >= pointD && point <= pointP){tutorial_doctor_pass();}
+		else{tutorial_doctor_fail();}
+	}
+	public void tutorial_doctor_pass()
+    {
+		Dc = 0;
+		sc += 1;
+		twothor = 2;
+	}
+	public void tutorial_doctor_fail()
+    {
+		tex.GetComponent<Text>().text = "You get score " + time.ToString();
+		docty.SetActive(true);
+		hide.SetActive(true);
+		antiP.SetActive(false);
+		Time.timeScale = 0;
 	}
 	IEnumerator twoSec()
 	{
