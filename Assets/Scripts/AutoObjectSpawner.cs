@@ -49,14 +49,7 @@ public class AutoObjectSpawner : MonoBehaviour
 		sc = PlayerSuvive.sc;
 		CheckDesertCondition();
 		CheckCrimsonCondition();
-
-
-
-		if (sc == 4 && lol == 0) 
-		{	SetCorruptScene();
-			ChangeCurrentSpeedByFloat(-5);
-			of.SetActive(true);
-			lol = 1;		}
+		CheckCorruptCondition();
 	}
 
 	void StartGameCoroutine()
@@ -83,6 +76,17 @@ public class AutoObjectSpawner : MonoBehaviour
 			SetCrimsonScene();
 			ChangeCurrentSpeedByFloat(-10);
 			lol = 0;
+		}
+	}
+
+	void CheckCorruptCondition()
+	{
+		if (sc == 4 && lol == 0)
+		{
+			SetCorruptScene();
+			ChangeCurrentSpeedByFloat(-5);
+			of.SetActive(true);
+			lol = 1;
 		}
 	}
 
@@ -125,6 +129,7 @@ public class AutoObjectSpawner : MonoBehaviour
 	{
 		col.material.SetColor("_Color", new Color32(r, g, b, a));
 	}
+
 	void ChangeCurrentSpeedByFloat(float speed)
 	{
 		ChangeSpeed(fast, speed);
@@ -136,7 +141,6 @@ public class AutoObjectSpawner : MonoBehaviour
 		float newSpeed= currentSpeed + speed;
 		return newSpeed;
 	}
-
 
 	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
@@ -151,8 +155,6 @@ public class AutoObjectSpawner : MonoBehaviour
 					yield return new WaitForSeconds (10f);
 					Destroy (newObject);
 					// Wait for some time before spawning another object
-				
-
 		}
 	}
 
@@ -162,8 +164,6 @@ public class AutoObjectSpawner : MonoBehaviour
 		newObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 		return newObject;
 	}
-
-
 
 	IEnumerator Fast()
 	{
