@@ -122,8 +122,7 @@ public class AutoObjectSpawner : MonoBehaviour
 					// Create some random numbers
 					yield return new WaitForSeconds (Random.Range (fast, slow));
 					// Generate the new object
-					GameObject newObject = Instantiate<GameObject> (prefabToSpawn);
-					newObject.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
+					GameObject newObject = GenerateNewObject();
 
 					yield return new WaitForSeconds (10f);
 					Destroy (newObject);
@@ -132,6 +131,16 @@ public class AutoObjectSpawner : MonoBehaviour
 
 		}
 	}
+
+	GameObject GenerateNewObject()
+	{
+		GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
+		newObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+		return newObject;
+	}
+
+
+
 	IEnumerator Fast()
 	{
 		yield return new WaitForSeconds (timer);
