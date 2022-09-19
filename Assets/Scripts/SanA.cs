@@ -18,20 +18,40 @@ public class SanA : MonoBehaviour {
 	public float mC;
 	public KeyCode jump;
 	public static float lockPoint;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		NumTran();
+		NumPro();
+		NumCarbo();
+		Nutrial();
+		NuttialBar();
+		Life();
+		Ultimate();
+	}
+
+	public void NumTran() 
+	{
 		mT = PlayerSuvive.poL * 0.3f;
-		mP = PlayerPrefs.GetFloat ("Weight", 0)*8;
+	}
+	public void NumPro()
+	{
+		mP = PlayerPrefs.GetFloat("Weight", 0) * 8;
+	}
+	public void NumCarbo()
+	{
 		mC = (PlayerSuvive.poL - mT) - mP;
+	}
+	public void Nutrial()
+	{
 		tran = PlayerSuvive.trans;
 		pro = PlayerSuvive.protein;
 		vit = PlayerSuvive.vin;
 		carbo = PlayerSuvive.car;
+	}
+	public void NuttialBar() 
+	{
 		trbar.value = tran;
 		Pbar.value = pro;
 		Vbar.value = vit;
@@ -39,12 +59,22 @@ public class SanA : MonoBehaviour {
 		Pbar.maxValue = mP;
 		trbar.maxValue = mT;
 		Cbar.maxValue = mC;
-		if (tran > mT && pro > mP && carbo > mC) {
+	}
+	public void Life() 
+	{
+		if (tran > mT && pro > mP && carbo > mC)
+		{
 			PlayerSuvive.sanCheck = 1;
-		} else {
+		}
+		else
+		{
 			PlayerSuvive.sanCheck = 0;
 		}
-		if (vit >= 100 && Input.GetKeyDown(jump)) {
+	}
+	public void Ultimate() 
+	{
+		if (vit >= 100 && Input.GetKeyDown(jump))
+		{
 			PlayerSuvive.trans = 0;
 			PlayerSuvive.protein = 0;
 			PlayerSuvive.car = 0;
@@ -52,5 +82,4 @@ public class SanA : MonoBehaviour {
 			lockPoint = 1;
 		}
 	}
-
 }

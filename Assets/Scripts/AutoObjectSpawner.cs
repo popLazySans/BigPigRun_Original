@@ -42,58 +42,111 @@ public class AutoObjectSpawner : MonoBehaviour
 	void Start ()
 	{
 		boxCollider2D = GetComponent<BoxCollider>();
-		 
-			StartCoroutine(SpawnObject());
-			StartCoroutine (Fast ());
-
-
+		StartGameCoroutine();
 	}
 	void Update()
 	{
 		sc = PlayerSuvive.sc;
-		if (sc == 2 && lol == 0) 
-		{
-			spawn1.SetActive (true);
-			spawn2.SetActive (true);
-			sound1.SetActive (false);
-			sound2.SetActive (true);
-			cac.SetActive (true);
-			scene1.SetActive (false);
-			scene2.SetActive (true);
-			col.material.SetColor("_Color", new Color32(249,255,50,20));
-			fast = fast + 10;
-			slow = slow + 18;
-			lol = 1;
-		}
-		if (sc == 3 && lol == 1) 
-		{
-			sound2.SetActive (false);
-			sound3.SetActive (true);
-			scene2.SetActive (false);
-			scene3.SetActive (true);
-			cac.SetActive (false);
-			col.material.SetColor ("_Color", new Color32 (255,49,49,1));
-			fast = fast - 10;
-			slow = slow - 10;
-			lol = 0;
-		}
-		if (sc == 4 && lol == 0) 
-		{
-			sound3.SetActive (false);
-			sound4.SetActive (true);
-			scene3.SetActive (false);
-			scene4.SetActive (true);
-			col.material.SetColor ("_Color", new Color32 (81,31,106,1));
-			fast = fast -5;
-			slow = slow -5;
-			cas1.SetActive (false);
-			cas2.SetActive (true);
-			of.SetActive(true);
-			lol = 1;
+		CheckSceneCondition();
+	}
 
+	void StartGameCoroutine()
+	{
+		StartCoroutine(SpawnObject());
+		StartCoroutine(Fast());
+	}
+
+	void CheckSceneCondition()
+	{
+		CheckDesertCondition();
+		CheckCrimsonCondition();
+		CheckCorruptCondition();
+	}
+
+	void CheckDesertCondition()
+	{
+		if (sc == 2 && lol == 0)
+		{
+			SetActiveSpawn();
+			SetDesertScene();
+			ChangeCurrentSpeed(10);
+			lol = 1;
 		}
 	}
-	
+
+	void CheckCrimsonCondition()
+	{
+		if (sc == 3 && lol == 1)
+		{
+			SetCrimsonScene();
+			ChangeCurrentSpeed(-10);
+			lol = 0;
+		}
+	}
+
+	void CheckCorruptCondition()
+	{
+		if (sc == 4 && lol == 0)
+		{
+			SetCorruptScene();
+			ChangeCurrentSpeed(-5);
+			of.SetActive(true);
+			lol = 1;
+		}
+	}
+
+	void SetDesertScene()
+	{
+		ChangeActiveGameObject(sound1, sound2);
+		ChangeActiveGameObject(scene1, scene2);
+		cac.SetActive(true);
+		SetMaterialColor(249, 255, 50, 20);
+	}
+
+	void SetCrimsonScene()
+	{
+		ChangeActiveGameObject(sound2, sound3);
+		cac.SetActive(false);
+		SetMaterialColor(255, 49, 49, 1);
+	}
+
+	void SetCorruptScene()
+	{
+		ChangeActiveGameObject(sound3, sound4);
+		ChangeActiveGameObject(scene3, scene4);
+		ChangeActiveGameObject(cas1, cas2);
+		SetMaterialColor(81, 31, 106, 1);
+	}
+
+	void SetActiveSpawn()
+	{
+		spawn1.SetActive(true);
+		spawn2.SetActive(true);
+	}
+
+	void ChangeActiveGameObject(GameObject currentGameObject, GameObject newGameObject)
+	{
+		currentGameObject.SetActive(false);
+		currentGameObject.SetActive(true);
+	}
+
+	void SetMaterialColor(byte r, byte g, byte b, byte a)
+	{
+		col.material.SetColor("_Color", new Color32(r, g, b, a));
+	}
+
+	void ChangeCurrentSpeed(float speed)
+	{
+		ChangeSpeed(fast, speed);
+		ChangeSpeed(slow, speed);
+	}
+
+	float ChangeSpeed(float currentSpeed ,float speed)
+	{
+		float newSpeed= currentSpeed + speed;
+		return newSpeed;
+	}
+
 	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
 	{
@@ -101,18 +154,22 @@ public class AutoObjectSpawner : MonoBehaviour
 			while (true) {
 				
 					// Create some random numbers
-				yield return new WaitForSeconds (Random.Range (fast, slow));
+					yield return new WaitForSeconds (Random.Range (fast, slow));
 					// Generate the new object
-					GameObject newObject = Instantiate<GameObject> (prefabToSpawn);
-					newObject.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
-
+					GameObject newObject = GenerateNewObject();
 					yield return new WaitForSeconds (10f);
 					Destroy (newObject);
 					// Wait for some time before spawning another object
-				
-
 		}
 	}
+
+	GameObject GenerateNewObject()
+	{
+		GameObject newObject = Instantiate<GameObject>(prefabToSpawn);
+		newObject.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+		return newObject;
+	}
+
 	IEnumerator Fast()
 	{
 		yield return new WaitForSeconds (timer);
