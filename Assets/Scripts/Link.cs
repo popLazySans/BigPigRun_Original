@@ -41,11 +41,11 @@ public class Link : MonoBehaviour {
 		off = 0;
 		PlayerMovementScript.oil = 0;
 		PlayerSuvive.sc = 1;
-		PlayerSuvive.time = 0;
-		PlayerSuvive.trans = 0;
-		PlayerSuvive.car = 0;
-		PlayerSuvive.protein = 0;
-		PlayerSuvive.vin = 0;
+		PlayerSuvive.score_point = 0;
+		PlayerSuvive.Tranfat_value = 0;
+		PlayerSuvive.Carbo_value = 0;
+		PlayerSuvive.Protein_value = 0;
+		PlayerSuvive.Vitamin_value = 0;
 		tm =1;
 		AutoObjectSpawnerLock.die = 0;
 	}
@@ -97,15 +97,15 @@ public class Link : MonoBehaviour {
 	public void Restart(){
 		
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name, LoadSceneMode.Single);
-		PlayerSuvive.time = 0;
+		PlayerSuvive.score_point = 0;
 		tm = 1;
 		PlayerMovementScript.oil = 0;
 		PlayerSuvive.sc = 1;
 		AutoObjectSpawnerLock.die = 0;
-		PlayerSuvive.trans = 0;
-		PlayerSuvive.car = 0;
-		PlayerSuvive.protein = 0;
-		PlayerSuvive.vin = 0;
+		PlayerSuvive.Tranfat_value = 0;
+		PlayerSuvive.Carbo_value = 0;
+		PlayerSuvive.Protein_value = 0;
+		PlayerSuvive.Vitamin_value = 0;
 	}
 	public void Gen()
 	{
@@ -115,7 +115,7 @@ public class Link : MonoBehaviour {
 		SceneManager.LoadScene ("cut");
 	}
 	public void comTwo(){
-		PlayerSuvive.twothor = 3;
+		PlayerSuvive.tutorial_pass = 3;
 	}
 	public void LinkToTuTwo(){
 		SceneManager.LoadScene ("SpherePlayTest");

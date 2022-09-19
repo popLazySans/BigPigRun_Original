@@ -27,17 +27,17 @@ public class Tutorial : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		scene = PlayerPrefs.GetInt ("Scene", 0);
-		if (PlayerSuvive.twothor == 1) {
+		if (PlayerSuvive.tutorial_pass == 1) {
 			PlayerPrefs.SetInt ("Scene", 7);
-			PlayerSuvive.twothor = 0;
+			PlayerSuvive.tutorial_pass = 0;
 		}
-		if (PlayerSuvive.twothor == 2) {
+		if (PlayerSuvive.tutorial_pass == 2) {
 			PlayerPrefs.SetInt ("Scene", 11);
-			PlayerSuvive.twothor = 0;
+			PlayerSuvive.tutorial_pass = 0;
 		}
-		if (PlayerSuvive.twothor == 3) {
+		if (PlayerSuvive.tutorial_pass == 3) {
 			PlayerPrefs.SetInt ("Scene", 12);
-			PlayerSuvive.twothor = 0;
+			PlayerSuvive.tutorial_pass = 0;
 		}
 		if (scene == 5 && loc == 1) {
 			t6.SetActive (false);

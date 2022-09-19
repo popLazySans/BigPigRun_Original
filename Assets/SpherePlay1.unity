@@ -17671,59 +17671,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa19f9b9cc6e71489508ea64dd28f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6, type: 3}
-  point: 2000
-  pointP: 0
-  pointD: 0
-  time2: 0
-  down: 0
-  show: {fileID: 2062809753}
-  pS: {fileID: 65544817}
-  Dc: 0
-  iM1: {fileID: 1442214959}
-  iM2: {fileID: 1093058261}
-  antiP: {fileID: 1007196059}
-  tex: {fileID: 180394155}
-  tex2: {fileID: 1846089205}
-  tex3: {fileID: 2078067843}
+  point_current: 2000
+  point_maximum: 0
+  point_minimum: 0
+  current_amout_burn: 0
+  current_weight_decrease: 0
+  complete_panel: {fileID: 2062809753}
+  Point_panel: {fileID: 65544817}
+  Green_weighter: {fileID: 1442214959}
+  Red_weighter: {fileID: 1093058261}
+  Pause_Button: {fileID: 1007196059}
+  Score_panel: {fileID: 180394155}
+  Burn_amout_panel: {fileID: 1846089205}
+  Weight_decreased_panel: {fileID: 2078067843}
   highScore: {fileID: 1880390131}
-  hide: {fileID: 473384453}
-  mushD: {fileID: 676864074}
-  hungry: {fileID: 857029751}
-  fatty: {fileID: 1325118576}
-  docty: {fileID: 704438937}
-  anDoc: {fileID: 548932766}
-  bar: {fileID: 1943519311}
-  itemI1: {fileID: 1066307712}
-  itemI2: {fileID: 956833065}
-  itemI3: {fileID: 553567441}
-  itemI4: {fileID: 280075092}
-  itemI5: {fileID: 1775609431}
-  itemI6: {fileID: 1371081413}
-  itemI7: {fileID: 1638546081}
-  itemN: {fileID: 2099516783}
-  itemP: {fileID: 113363709}
-  itemC: {fileID: 1490898687}
-  itemO: {fileID: 725428925}
-  itemV: {fileID: 1322690849}
-  one: 0.01
+  failed_BG: {fileID: 473384453}
+  Poison_diePanel: {fileID: 676864074}
+  Hungry_diePanel: {fileID: 857029751}
+  Fat_diePanel: {fileID: 1325118576}
+  NotPass_diePanel: {fileID: 704438937}
+  DontGetDocter_diePanel: {fileID: 548932766}
+  Calories_slide: {fileID: 1943519311}
+  hamburger_picture: {fileID: 1066307712}
+  chicken_picture: {fileID: 956833065}
+  pineapple_picture: {fileID: 553567441}
+  vegetable_picture: {fileID: 280075092}
+  rice_picture: {fileID: 1775609431}
+  watermelon_picture: {fileID: 1371081413}
+  mushroom_picture: {fileID: 1638546081}
+  itemName: {fileID: 2099516783}
+  itemProtein: {fileID: 113363709}
+  itemCarbohydrate: {fileID: 1490898687}
+  itemTranfat: {fileID: 725428925}
+  itemVitamin: {fileID: 1322690849}
+  freqTime: 0.01
   height: 0
   weight: 0
-  gen: 0
+  gender: 0
   age: 0
   name: 
-  low: {fileID: 986086488}
-  high: {fileID: 1481369493}
-  proBar: {fileID: 2059591130}
-  carBar: {fileID: 496660237}
-  vinBar: {fileID: 539098162}
-  oilBar: {fileID: 792783569}
-  black: {fileID: 271872572}
-  sCoreLock1: 0
-  sCoreLock2: 0
-  sCoreLock3: 0
-  sCoreLock4: 0
-  sCoreLock5: 0
+  minimum_calories_text: {fileID: 986086488}
+  maximum_calories_text: {fileID: 1481369493}
+  protein_text: {fileID: 2059591130}
+  carbohydrate_text: {fileID: 496660237}
+  vintamin_text: {fileID: 539098162}
+  tranfat_text: {fileID: 792783569}
+  food_detail_panel: {fileID: 271872572}
+  ScoreNo1: 0
+  ScoreNo2: 0
+  ScoreNo3: 0
+  ScoreNo4: 0
+  ScoreNo5: 0
 --- !u!114 &2110101411
 MonoBehaviour:
   m_ObjectHideFlags: 0

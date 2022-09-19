@@ -5,68 +5,66 @@ using UnityEngine.UI;
 
 
 public class PlayerSuvive : MonoBehaviour {
-	public GameObject item;
-	public float point;
-	public float pointP;
-	public float pointD;
-	public static float time;
-	public int time2;
-	public float down;
-	public GameObject show;
-	public GameObject pS;
-	public static float trans;
-	public static float protein;
-	public static float car;
-	public static float vin;
-	public static float pon;
-	public static float poL;
-	public int Dc = 0;
-	public GameObject iM1;
-	public GameObject iM2;
-	public GameObject antiP;
-	public GameObject tex;
-	public GameObject tex2;
-	public GameObject tex3;
+	public float point_current;
+	public float point_maximum;
+	public float point_minimum;
+	public static float score_point;
+	public int current_amout_burn;
+	public float current_weight_decrease;
+	public GameObject complete_panel;
+	public GameObject Point_panel;
+	public static float Tranfat_value;
+	public static float Protein_value;
+	public static float Carbo_value;
+	public static float Vitamin_value;
+	public static float point_toStatic;
+	public static float point_origin;
+	public GameObject Green_weighter;
+	public GameObject Red_weighter;
+	public GameObject Pause_Button;
+	public GameObject Score_panel;
+	public GameObject Burn_amout_panel;
+	public GameObject Weight_decreased_panel;
 	public Text highScore;
-	public GameObject hide;
-	public GameObject mushD;
-	public GameObject hungry;
-	public GameObject fatty;
-	public GameObject docty;
-	public GameObject anDoc;
-	public Slider bar;
-	public GameObject itemI1;
-	public GameObject itemI2;
-	public GameObject itemI3;
-	public GameObject itemI4;
-	public GameObject itemI5;
-	public GameObject itemI6;
-	public GameObject itemI7;
-	public Text itemN;
-	public Text itemP;
-	public Text itemC;
-	public Text itemO;
-	public Text itemV;
-	public float one = 0.01f;
+	public GameObject failed_BG;
+	public GameObject Poison_diePanel;
+	public GameObject Hungry_diePanel;
+	public GameObject Fat_diePanel;
+	public GameObject NotPass_diePanel;
+	public GameObject DontGetDocter_diePanel;
+	public Slider Calories_slide;
+	public GameObject hamburger_picture;
+	public GameObject chicken_picture;
+	public GameObject pineapple_picture;
+	public GameObject vegetable_picture;
+	public GameObject rice_picture;
+	public GameObject watermelon_picture;
+	public GameObject mushroom_picture;
+	public Text itemName;
+	public Text itemProtein;
+	public Text itemCarbohydrate;
+	public Text itemTranfat;
+	public Text itemVitamin;
+	public float freqTime = 0.01f;
 	public float height;
 	public float weight;
-	public int gen;
+	public int gender;
 	public int age;
 	public string name;
-	public Text low;
-	public Text high;
-	public static int sanCheck;
-	public static int twothor;
-	public Text proBar;
-	public Text carBar;
-	public Text vinBar;
-	public Text oilBar;
-	public GameObject black;
-	public int sCoreLock1;
-	public int sCoreLock2;
-	public int sCoreLock3;
-	public int sCoreLock4;
-	public int sCoreLock5;
+	public Text minimum_calories_text;
+	public Text maximum_calories_text;
+	public static int TranfatCheck;
+	public static int tutorial_pass;
+	public Text protein_text;
+	public Text carbohydrate_text;
+	public Text vintamin_text;
+	public Text tranfat_text;
+	public GameObject food_detail_panel;
+	public int ScoreNo1;
+	public int ScoreNo2;
+	public int ScoreNo3;
+	public int ScoreNo4;
+	public int ScoreNo5;
 
 	public static int sc = 1;
 	void Start() {
@@ -82,7 +80,7 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void SetAppearance()
 	{
-		gen = SetGender();
+		gender = SetGender();
 		age = SetAge();
 		height = SetHeight();
 		weight = SetWeight();
@@ -115,38 +113,38 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void checkGender()
 	{
-		if (gen == 1) { Man_Calculator(); }
-		if (gen == 2) { Woman_Calculator(); }
+		if (gender == 1) { Man_Calculator(); }
+		if (gender == 2) { Woman_Calculator(); }
 	}
 	public void Man_Calculator()
 	{
-		point = ((10f * height) + (6.25f * weight) - (5f * age) + 5f) * 1.2f;
+		point_current = ((10f * height) + (6.25f * weight) - (5f * age) + 5f) * 1.2f;
 	}
 	public void Woman_Calculator()
 	{
-		point = ((10f * height) + (6.25f * weight) - (5f * age) - 161f) * 1.2f;
+		point_current = ((10f * height) + (6.25f * weight) - (5f * age) - 161f) * 1.2f;
 	}
 	public void SetCal()
 	{
-		poL = point;
+		point_origin = point_current;
 		SetLowandHightCal();
 		SetCalText();
 		SetCalBar();
 	}
 	public void SetLowandHightCal()
 	{
-		pointP = point + 250;
-		pointD = point - 250;
+		point_maximum = point_current + 250;
+		point_minimum = point_current - 250;
 	}
 	public void SetCalText()
 	{
-		low.text = "Low Cal :" + pointD.ToString();
-		high.text = "High Cal :" + pointP.ToString();
+		minimum_calories_text.text = "Low Cal :" + point_minimum.ToString();
+		maximum_calories_text.text = "High Cal :" + point_maximum.ToString();
 	}
 	public void SetCalBar()
 	{
-		bar.minValue = pointD;
-		bar.maxValue = pointP;
+		Calories_slide.minValue = point_minimum;
+		Calories_slide.maxValue = point_maximum;
 	}
 
 	void Update() {
@@ -157,33 +155,33 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void SettingValue()
 	{
-		down = time2 / 7700f;
+		current_weight_decrease = current_amout_burn / 7700f;
 		HightScore_Current();
 		SetValueToPoint();
 		Set_Nutrients_text();
 	}
 	public void SetValueToPoint()
 	{
-		bar.value = point;
-		pon = point;
-		PlayerMovementScript.pot = point;
+		Calories_slide.value = point_current;
+		point_toStatic = point_current;
+		PlayerMovementScript.pot = point_current;
 	}
 	public void HightScore_Current()
 	{
-		Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1", sCoreLock5, sCoreLock4, sCoreLock3, sCoreLock2, sCoreLock1);
+		Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1", ScoreNo5, ScoreNo4, ScoreNo3, ScoreNo2, ScoreNo1);
 	}
 	public void Rank_Checker(string rankScore5, string rankName5, string rankScore4, string rankName4, string rankScore3, string rankName3, string rankScore2, string rankName2, string rankScore1, string rankName1, int scoreLock5, int scoreLock4, int scoreLock3, int scoreLock2, int scoreLock1)
 	{
-		if (time > PlayerPrefs.GetFloat(rankScore5, 0)) { Update_Ranking(rankScore4, rankName4, rankScore5, rankName5, "", "", scoreLock5);
-			if (time > PlayerPrefs.GetFloat(rankScore4, 0)) { Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
-				if (time > PlayerPrefs.GetFloat(rankScore3, 0)) { Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
-					if (time > PlayerPrefs.GetFloat(rankScore2, 0)) { Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
-						if (time > PlayerPrefs.GetFloat(rankScore1, 0)) { Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1); } } } }}
+		if (score_point > PlayerPrefs.GetFloat(rankScore5, 0)) { Update_Ranking(rankScore4, rankName4, rankScore5, rankName5, "", "", scoreLock5);
+			if (score_point > PlayerPrefs.GetFloat(rankScore4, 0)) { Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
+				if (score_point > PlayerPrefs.GetFloat(rankScore3, 0)) { Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
+					if (score_point > PlayerPrefs.GetFloat(rankScore2, 0)) { Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
+						if (score_point > PlayerPrefs.GetFloat(rankScore1, 0)) { Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1); } } } }}
 	}
 	public void Update_Ranking(string rankScorePlus, string rankNamePlus, string rankScore, string rankName, string rankScoreDe, string rankNameDe, int scoreLock)
 	{
 		if (scoreLock == 0) { if (rankScoreDe != "") { reset_HighScore(rankScoreDe, rankNameDe, rankScore, rankName); } scoreLock = 1; }
-		if (rankScorePlus == "" || (time > PlayerPrefs.GetFloat(rankScore, 0) && time < PlayerPrefs.GetFloat(rankScorePlus, 0))) { set_HighScore(rankScore, rankName); }
+		if (rankScorePlus == "" || (score_point > PlayerPrefs.GetFloat(rankScore, 0) && score_point < PlayerPrefs.GetFloat(rankScorePlus, 0))) { set_HighScore(rankScore, rankName); }
 	}
 	public void reset_HighScore(string rankScoreDe, string rankNameDe, string rankScore, string rankName)
 	{
@@ -192,23 +190,23 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void set_HighScore(string rankScore, string rankName)
 	{
-		PlayerPrefs.SetFloat(rankScore, time);
+		PlayerPrefs.SetFloat(rankScore, score_point);
 		PlayerPrefs.SetString(rankName, name);
 	}
 	public void ChangeColor_Weighter()
 	{
-		if (pointP >= point && pointD <= point) { green_weight(); }
+		if (point_maximum >= point_current && point_minimum <= point_current) { green_weight(); }
 		else { red_weight(); }
 	}
 	public void green_weight()
 	{
-		iM1.SetActive(true);
-		iM2.SetActive(false);
+		Green_weighter.SetActive(true);
+		Red_weighter.SetActive(false);
 	}
 	public void red_weight()
 	{
-		iM1.SetActive(false);
-		iM2.SetActive(true);
+		Green_weighter.SetActive(false);
+		Red_weighter.SetActive(true);
 	}
 	public void Die_Statement()
 	{
@@ -218,16 +216,16 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void Hungry()
 	{
-		if (point <= 0)
-		{ hungry.SetActive(true);
-			hide.SetActive(true);
+		if (point_current <= 0)
+		{ Hungry_diePanel.SetActive(true);
+			failed_BG.SetActive(true);
 			show_died_text(); }
 	}
 	public void Fatty()
 	{
-		if (sanCheck == 1)
-		{ hide.SetActive(true);
-			fatty.SetActive(true);
+		if (TranfatCheck == 1)
+		{ failed_BG.SetActive(true);
+			Fat_diePanel.SetActive(true);
 			show_died_text();
 			Time.timeScale = 0; }
 	}
@@ -242,64 +240,64 @@ public class PlayerSuvive : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(15);
 		if (AutoObjectSpawnerLock.die == 1)
-		{hide.SetActive(true);
-		anDoc.SetActive(true);
+		{failed_BG.SetActive(true);
+		DontGetDocter_diePanel.SetActive(true);
 		show_died_text();}
 	}
 	public void show_died_text()
 	{
 		Summary_text();
-		antiP.SetActive(false);
+		Pause_Button.SetActive(false);
 		Time.timeScale = 0;
 		Item_text();
 		Set_item_object();
 	}
 	public void Summary_text()
 	{
-		tex.GetComponent<Text>().text = "You get score " + time.ToString() + " km";
-		tex2.GetComponent<Text>().text = "Total amount of burns is " + time2.ToString() + " kcal";
-		tex3.GetComponent<Text>().text = "Total weight decreased " + down.ToString() + " kg";
+		Score_panel.GetComponent<Text>().text = "You get score " + score_point.ToString() + " km";
+		Burn_amout_panel.GetComponent<Text>().text = "Total amount of burns is " + current_amout_burn.ToString() + " kcal";
+		Weight_decreased_panel.GetComponent<Text>().text = "Total weight decreased " + current_weight_decrease.ToString() + " kg";
 	}
 	public void Item_text ()
 	{
-		itemN.text = "";
-		itemP.text = "";
-		itemC.text = "";
-		itemO.text = "";
-		itemV.text = "";
+		itemName.text = "";
+		itemProtein.text = "";
+		itemCarbohydrate.text = "";
+		itemTranfat.text = "";
+		itemVitamin.text = "";
 	}
 	public void Set_item_object()
     {
-		black.SetActive(false);
-		itemI1.SetActive(false);itemI2.SetActive(false);itemI3.SetActive(false);itemI4.SetActive(false);itemI5.SetActive(false);itemI6.SetActive(false);itemI7.SetActive(false);
+		food_detail_panel.SetActive(false);
+		hamburger_picture.SetActive(false);chicken_picture.SetActive(false);pineapple_picture.SetActive(false);vegetable_picture.SetActive(false);rice_picture.SetActive(false);watermelon_picture.SetActive(false);mushroom_picture.SetActive(false);
 	}
 	
 	public void Set_Nutrients_text()
     {
-		proBar.text = "Protein " + protein.ToString() + " kCal";
-		carBar.text = "Carbohydrate " + car.ToString() + " kCal";
-		vinBar.text = "Vitamin " + vin.ToString() + " kCal";
-		oilBar.text = "Fat " + trans.ToString() + " kCal";
-		pS.GetComponent<Text>().text = point.ToString() + " kCal";
+		protein_text.text = "Protein " + Protein_value.ToString() + " kCal";
+		carbohydrate_text.text = "Carbohydrate " + Carbo_value.ToString() + " kCal";
+		vintamin_text.text = "Vitamin " + Vitamin_value.ToString() + " kCal";
+		tranfat_text.text = "Fat " + Tranfat_value.ToString() + " kCal";
+		Point_panel.GetComponent<Text>().text = point_current.ToString() + " kCal";
 	}
 	public void Ultimate()
     {
 		if (SanA.lockPoint == 1)
-		{point = poL;
+		{point_current = point_origin;
 		SanA.lockPoint = 0;}
 	}
 	IEnumerator count()
 	{
 		while (true) {
-			yield return new WaitForSeconds (one);
+			yield return new WaitForSeconds (freqTime);
 			count_calculate();
-			if (sc == 3 && one == 1) {one = (one) / 3;}}
+			if (sc == 3 && freqTime == 1) {freqTime = (freqTime) / 3;}}
 	}
 	public void count_calculate()
     {
-		time += 0.014f;
-		time2 += 1;
-		point -= 1f;
+		score_point += 0.014f;
+		current_amout_burn += 1;
+		point_current -= 1f;
 	}
 
 	
@@ -366,8 +364,8 @@ public class PlayerSuvive : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Mushroom2")
 		{Destroy(other.gameObject);
-		mushD.SetActive(true);
-		hide.SetActive(true);
+		Poison_diePanel.SetActive(true);
+		failed_BG.SetActive(true);
 		show_died_text();}
 	}
 	public void Food_detail(Collision other, float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus, string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text, bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
@@ -379,28 +377,28 @@ public class PlayerSuvive : MonoBehaviour {
 	}
 	public void plus_value(float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus)
 	{
-		point += point_plus;
+		point_current += point_plus;
 		PlayerMovementScript.oil += Oil_plus;
 		Nutrients_value(trans_plus, protein_plus, car_plus, vin_plus);
 	}
 	public void Nutrients_value(float trans_plus, float protein_plus, float car_plus, float vin_plus)
     {
-		trans += trans_plus;
-		protein += protein_plus;
-		car += car_plus;
-		vin += vin_plus;
+		Tranfat_value += trans_plus;
+		Protein_value += protein_plus;
+		Carbo_value += car_plus;
+		Vitamin_value += vin_plus;
 	}
 	public void Set_item_text(string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text) 
 	{
-		itemN.text = itemN_text;
-		itemP.text = itemP_text;
-		itemC.text = itemC_text;
-		itemO.text = itemO_text;
-		itemV.text = itemV_text;
+		itemName.text = itemN_text;
+		itemProtein.text = itemP_text;
+		itemCarbohydrate.text = itemC_text;
+		itemTranfat.text = itemO_text;
+		itemVitamin.text = itemV_text;
 	}
 	public void Set_item_active(bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
     {
-		black.SetActive(black_bool);itemI1.SetActive(I1_bool);itemI2.SetActive(I2_bool);itemI3.SetActive(I3_bool);itemI4.SetActive(I4_bool);itemI5.SetActive(I5_bool);itemI6.SetActive(I6_bool);itemI7.SetActive(I7_bool);
+		food_detail_panel.SetActive(black_bool);hamburger_picture.SetActive(I1_bool);chicken_picture.SetActive(I2_bool);pineapple_picture.SetActive(I3_bool);vegetable_picture.SetActive(I4_bool);rice_picture.SetActive(I5_bool);watermelon_picture.SetActive(I6_bool);mushroom_picture.SetActive(I7_bool);
 	}
 
 	public void Enemy_group(Collision other)
@@ -412,46 +410,45 @@ public class PlayerSuvive : MonoBehaviour {
     {
 		if (other.gameObject.tag == "Enemy")
 		{Destroy(other.gameObject);
-		point -= 1000;}
+		point_current -= 1000;}
 	}
 	public void Cactus(Collision other)
     {
 		if (other.gameObject.tag == "Cactus")
 		{Destroy(other.gameObject);
-		point -= 300;}
+		point_current -= 300;}
 	}
 	public void Doctor(Collision other)
     {
 		if (other.gameObject.tag == "Checked")
-		{show.SetActive(true);
+		{complete_panel.SetActive(true);
 		AutoObjectSpawnerLock.die = 0;
 		Doctor_check();
 		prepare_to_nextwave(other);}
 	}
 	public void Doctor_check()
     {
-		if (point >= pointD && point <= pointP) { Doctor_complete_check(); }
+		if (point_current >= point_minimum && point_current <= point_maximum) { Doctor_complete_check(); }
 		else { Doctor_die_check(); }
 	}
 	public void Doctor_complete_check()
     {
-		show.SetActive(true);
-		show.GetComponent<Text>().text = "Complete";
+		complete_panel.SetActive(true);
+		complete_panel.GetComponent<Text>().text = "Complete";
 		Doctor_reset_value();
 	}
 	public void Doctor_reset_value()
     {
-		Dc = 0;
 		sc += 1;
-		trans = 0;
-		protein = 0;
-		car = 0;
+		Tranfat_value = 0;
+		Protein_value = 0;
+		Carbo_value = 0;
 	}
 	public void Doctor_die_check()
     {
-		show.SetActive(false);
-		docty.SetActive(true);
-		hide.SetActive(true);
+		complete_panel.SetActive(false);
+		NotPass_diePanel.SetActive(true);
+		failed_BG.SetActive(true);
 		show_died_text();
 	}
 	public void prepare_to_nextwave(Collision other)
@@ -468,41 +465,40 @@ public class PlayerSuvive : MonoBehaviour {
 	public void pine_test(Collision other)
     {
 		if (other.gameObject.tag == "Test1")
-		{point += 1200;
-		twothor = 1;
+		{point_current += 1200;
+		tutorial_pass = 1;
 		Destroy(other.gameObject);}
 	}
 	public void redMush_test(Collision other) 
 	{
 		if (other.gameObject.tag == "Test2")
-		{show.SetActive(true);
+		{complete_panel.SetActive(true);
 		AutoObjectSpawnerLock.die = 0;
 		tutorial_doctor_check();
 		prepare_to_nextwave(other);}
 	}
 	public void tutorial_doctor_check()
     {
-		if (point >= pointD && point <= pointP){tutorial_doctor_pass();}
+		if (point_current >= point_minimum && point_current <= point_maximum){tutorial_doctor_pass();}
 		else{tutorial_doctor_fail();}
 	}
 	public void tutorial_doctor_pass()
     {
-		Dc = 0;
 		sc += 1;
-		twothor = 2;
+		tutorial_pass = 2;
 	}
 	public void tutorial_doctor_fail()
     {
-		tex.GetComponent<Text>().text = "You get score " + time.ToString();
-		docty.SetActive(true);
-		hide.SetActive(true);
-		antiP.SetActive(false);
+		Score_panel.GetComponent<Text>().text = "You get score " + score_point.ToString();
+		NotPass_diePanel.SetActive(true);
+		failed_BG.SetActive(true);
+		Pause_Button.SetActive(false);
 		Time.timeScale = 0;
 	}
 	IEnumerator twoSec()
 	{
 		yield return new WaitForSeconds(2);
-		show.SetActive(false);
+		complete_panel.SetActive(false);
 	}
 
 }
