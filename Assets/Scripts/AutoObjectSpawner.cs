@@ -22,15 +22,11 @@ public class AutoObjectSpawner : MonoBehaviour
 	public GameObject crimsonSound;
 	public GameObject corruptSound;
 	public GameObject foodSpawner;
-	[Header("Object creation")]
 
-	// The object to spawn
-	// WARNING: take if from the Project panel, NOT the Scene/Hierarchy!
+	[Header("Object creation")]
 	public GameObject prefabToSpawn;
 
 	[Header("Other options")]
-
-	// Configure the spawning pattern
 	public float spawnInterval = 1f;
 
 	private BoxCollider boxCollider2D;
@@ -139,19 +135,15 @@ public class AutoObjectSpawner : MonoBehaviour
 		return newSpeed;
 	}
 
-	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
 	{
 		yield return new WaitForSeconds (spawnRate);
 			while (true) {
 				
-					// Create some random numbers
 					yield return new WaitForSeconds (Random.Range (fastSpeed, slowSpeed));
-					// Generate the new object
 					GameObject newObject = GenerateNewObject();
 					yield return new WaitForSeconds (10f);
 					Destroy (newObject);
-					// Wait for some time before spawning another object
 		}
 	}
 
