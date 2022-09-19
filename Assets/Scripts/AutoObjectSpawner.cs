@@ -4,28 +4,24 @@ using System.Collections;
 [RequireComponent(typeof(BoxCollider))]
 public class AutoObjectSpawner : MonoBehaviour
 {
-	public float slow;
-	public float fast;
-	public int time;
-	public int timer;
-	public int rate;
-	public static int sc;
-	public int lol;
-	public Renderer col;
-	public GameObject cas1;
-	public GameObject cas2;
-	public GameObject of;
-	public GameObject cac;
-	public GameObject scene1;
-	public GameObject scene2;
-	public GameObject scene3;
-	public GameObject scene4;
-	public GameObject sound1;
-	public GameObject sound2;
-	public GameObject sound3;
-	public GameObject sound4;
-	public GameObject spawn1;
-	public GameObject spawn2;
+	public float slowSpeed;
+	public float fastSpeed;
+	public int spawnRate;
+	public static int currentScene;
+	public Renderer sphereColor;
+	public GameObject defaultCastle;
+	public GameObject corruptCastle;
+	public GameObject specialEnemySpawner;
+	public GameObject cactusSpawner;
+	public GameObject defaultScene;
+	public GameObject desertScene;
+	public GameObject crimsonScene;
+	public GameObject corruptScene;
+	public GameObject defaultSound;
+	public GameObject desertSound;
+	public GameObject crimsonSound;
+	public GameObject corruptSound;
+	public GameObject foodSpawner;
 	[Header("Object creation")]
 
 	// The object to spawn
@@ -46,7 +42,7 @@ public class AutoObjectSpawner : MonoBehaviour
 	}
 	void Update()
 	{
-		sc = PlayerSuvive.sc;
+		currentScene = PlayerSuvive.sc;
 		CheckSceneCondition();
 	}
 
@@ -65,80 +61,76 @@ public class AutoObjectSpawner : MonoBehaviour
 
 	void CheckDesertCondition()
 	{
-		if (sc == 2 && lol == 0)
+		if (currentScene == 2)
 		{
 			SetActiveSpawn();
 			SetDesertScene();
 			ChangeCurrentSpeed(10);
-			lol = 1;
 		}
 	}
 
 	void CheckCrimsonCondition()
 	{
-		if (sc == 3 && lol == 1)
+		if (currentScene == 3)
 		{
 			SetCrimsonScene();
 			ChangeCurrentSpeed(-10);
-			lol = 0;
 		}
 	}
 
 	void CheckCorruptCondition()
 	{
-		if (sc == 4 && lol == 0)
+		if (currentScene == 4)
 		{
 			SetCorruptScene();
 			ChangeCurrentSpeed(-5);
-			of.SetActive(true);
-			lol = 1;
+			specialEnemySpawner.SetActive(true);
 		}
 	}
 
 	void SetDesertScene()
 	{
-		ChangeActiveGameObject(sound1, sound2);
-		ChangeActiveGameObject(scene1, scene2);
-		cac.SetActive(true);
+		ChangeActiveGameObject(defaultSound, desertSound);
+		ChangeActiveGameObject(defaultScene, desertScene);
+		cactusSpawner.SetActive(true);
 		SetMaterialColor(249, 255, 50, 20);
 	}
 
 	void SetCrimsonScene()
 	{
-		ChangeActiveGameObject(sound2, sound3);
-		cac.SetActive(false);
+		ChangeActiveGameObject(desertSound, crimsonSound);
+		cactusSpawner.SetActive(false);
 		SetMaterialColor(255, 49, 49, 1);
 	}
 
 	void SetCorruptScene()
 	{
-		ChangeActiveGameObject(sound3, sound4);
-		ChangeActiveGameObject(scene3, scene4);
-		ChangeActiveGameObject(cas1, cas2);
+		ChangeActiveGameObject(crimsonSound, corruptSound);
+		ChangeActiveGameObject(crimsonScene, corruptScene);
+		ChangeActiveGameObject(defaultCastle, corruptCastle);
 		SetMaterialColor(81, 31, 106, 1);
 	}
 
 	void SetActiveSpawn()
 	{
-		spawn1.SetActive(true);
-		spawn2.SetActive(true);
+		foodSpawner.SetActive(true);
 	}
 
 	void ChangeActiveGameObject(GameObject currentGameObject, GameObject newGameObject)
 	{
 		currentGameObject.SetActive(false);
-		currentGameObject.SetActive(true);
+		newGameObject.SetActive(true);
 	}
 
 	void SetMaterialColor(byte r, byte g, byte b, byte a)
 	{
-		col.material.SetColor("_Color", new Color32(r, g, b, a));
+		sphereColor.material.SetColor("_Color", new Color32(r, g, b, a));
 	}
 
 	void ChangeCurrentSpeed(float speed)
 	{
-		ChangeSpeed(fast, speed);
-		ChangeSpeed(slow, speed);
+		ChangeSpeed(fastSpeed, speed);
+		ChangeSpeed(slowSpeed, speed);
 	}
 
 	float ChangeSpeed(float currentSpeed ,float speed)
@@ -150,11 +142,11 @@ public class AutoObjectSpawner : MonoBehaviour
 	// This will spawn an object, and then wait some time, then spawn another...
 	IEnumerator SpawnObject ()
 	{
-		yield return new WaitForSeconds (rate);
+		yield return new WaitForSeconds (spawnRate);
 			while (true) {
 				
 					// Create some random numbers
-					yield return new WaitForSeconds (Random.Range (fast, slow));
+					yield return new WaitForSeconds (Random.Range (fastSpeed, slowSpeed));
 					// Generate the new object
 					GameObject newObject = GenerateNewObject();
 					yield return new WaitForSeconds (10f);
@@ -172,8 +164,7 @@ public class AutoObjectSpawner : MonoBehaviour
 
 	IEnumerator Fast()
 	{
-		yield return new WaitForSeconds (timer);
-		time = 1;
+		yield return new WaitForSeconds (spawnInterval);
 	}
 
 }

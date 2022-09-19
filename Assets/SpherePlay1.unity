@@ -222,27 +222,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1994610392172904, guid: 6565ebfe9f712a44f9d2d33821bcdac0,
     type: 3}
   spawnInterval: 1
@@ -1314,27 +1310,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1118109742681294, guid: aa1fc918ebe0fcc489ce6eed58afafc7,
     type: 3}
   spawnInterval: 1
@@ -1445,7 +1437,7 @@ GameObject:
   - component: {fileID: 201467939}
   - component: {fileID: 201467938}
   m_Layer: 0
-  m_Name: spawner (41)
+  m_Name: spawnerf(41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,27 +1469,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1266901202040348, guid: cbce4402b93a7df4e95b8aada26c7bd3,
     type: 3}
   spawnInterval: 1
@@ -1580,27 +1568,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -1950,27 +1934,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1516576937608238, guid: faf87ecf5b9e3264c881afeb4a3c63ea,
     type: 3}
   spawnInterval: 1
@@ -2444,27 +2424,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -3264,27 +3240,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1516576937608238, guid: faf87ecf5b9e3264c881afeb4a3c63ea,
     type: 3}
   spawnInterval: 1
@@ -3622,27 +3594,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
@@ -4078,7 +4046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &516551997
 Transform:
   m_ObjectHideFlags: 0
@@ -4105,27 +4073,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 16
-  fast: 8
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1132746812942790, guid: 5197793b634b06846883869bdca5f174,
     type: 3}
   spawnInterval: 1
@@ -4391,27 +4355,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1390260679239442, guid: b512c71deaf1bd643906d1c4b4d323fb,
     type: 3}
   spawnInterval: 1
@@ -4725,27 +4685,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1994610392172904, guid: 6565ebfe9f712a44f9d2d33821bcdac0,
     type: 3}
   spawnInterval: 1
@@ -5227,27 +5183,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
@@ -5342,27 +5294,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
@@ -5681,27 +5629,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1994610392172904, guid: 6565ebfe9f712a44f9d2d33821bcdac0,
     type: 3}
   spawnInterval: 1
@@ -6287,27 +6231,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
@@ -6382,27 +6322,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1118109742681294, guid: aa1fc918ebe0fcc489ce6eed58afafc7,
     type: 3}
   spawnInterval: 1
@@ -6606,27 +6542,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1132746812942790, guid: 5197793b634b06846883869bdca5f174,
     type: 3}
   spawnInterval: 1
@@ -6755,27 +6687,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -6850,27 +6778,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1266901202040348, guid: cbce4402b93a7df4e95b8aada26c7bd3,
     type: 3}
   spawnInterval: 1
@@ -6917,27 +6841,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -7205,6 +7125,12 @@ Transform:
   m_Father: {fileID: 482481494}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &852482891 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23115456246145364, guid: 73300ff66ed5e474bb5aeb092c59f9a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1483774424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &856911765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7566,27 +7492,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -7679,27 +7601,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1118109742681294, guid: aa1fc918ebe0fcc489ce6eed58afafc7,
     type: 3}
   spawnInterval: 1
@@ -7920,27 +7838,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1132746812942790, guid: 5197793b634b06846883869bdca5f174,
     type: 3}
   spawnInterval: 1
@@ -7987,27 +7901,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1994610392172904, guid: 6565ebfe9f712a44f9d2d33821bcdac0,
     type: 3}
   spawnInterval: 1
@@ -8706,27 +8616,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1118109742681294, guid: aa1fc918ebe0fcc489ce6eed58afafc7,
     type: 3}
   spawnInterval: 1
@@ -9266,27 +9172,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1974605130462110, guid: bdadc45c4c9922b45a1b0545a8acad64,
     type: 3}
   spawnInterval: 1
@@ -10042,27 +9944,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1266901202040348, guid: cbce4402b93a7df4e95b8aada26c7bd3,
     type: 3}
   spawnInterval: 1
@@ -10174,27 +10072,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1516576937608238, guid: faf87ecf5b9e3264c881afeb4a3c63ea,
     type: 3}
   spawnInterval: 1
@@ -10406,27 +10300,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 20
-  fast: 11
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 20
+  fastSpeed: 11
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1309664311017220, guid: e2098453fe13319449cf36d39a67cdfb,
     type: 3}
   spawnInterval: 1
@@ -10487,27 +10377,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 20
-  fast: 11
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 20
+  fastSpeed: 11
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1309664311017220, guid: e2098453fe13319449cf36d39a67cdfb,
     type: 3}
   spawnInterval: 1
@@ -10621,27 +10507,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1994610392172904, guid: 6565ebfe9f712a44f9d2d33821bcdac0,
     type: 3}
   spawnInterval: 1
@@ -10689,7 +10571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1287581153
 Transform:
   m_ObjectHideFlags: 0
@@ -10716,27 +10598,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 16
-  fast: 8
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1132746812942790, guid: 5197793b634b06846883869bdca5f174,
     type: 3}
   spawnInterval: 1
@@ -10797,27 +10675,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 20
-  fast: 11
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 20
+  fastSpeed: 11
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1309664311017220, guid: e2098453fe13319449cf36d39a67cdfb,
     type: 3}
   spawnInterval: 1
@@ -11381,27 +11255,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1118109742681294, guid: aa1fc918ebe0fcc489ce6eed58afafc7,
     type: 3}
   spawnInterval: 1
@@ -12247,27 +12117,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1266901202040348, guid: cbce4402b93a7df4e95b8aada26c7bd3,
     type: 3}
   spawnInterval: 1
@@ -13928,27 +13794,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1266901202040348, guid: cbce4402b93a7df4e95b8aada26c7bd3,
     type: 3}
   spawnInterval: 1
@@ -14122,12 +13984,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!23 &1649196125 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23115456246145364, guid: 73300ff66ed5e474bb5aeb092c59f9a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1483774424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1657108631
 GameObject:
   m_ObjectHideFlags: 0
@@ -14672,27 +14528,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1144558194144764, guid: b117688d2fe3ef945832fa62f11149a6,
     type: 3}
   spawnInterval: 1
@@ -15577,27 +15429,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1390260679239442, guid: b512c71deaf1bd643906d1c4b4d323fb,
     type: 3}
   spawnInterval: 1
@@ -15984,27 +15832,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1516576937608238, guid: faf87ecf5b9e3264c881afeb4a3c63ea,
     type: 3}
   spawnInterval: 1
@@ -16461,27 +16305,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
@@ -16584,27 +16424,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1390260679239442, guid: b512c71deaf1bd643906d1c4b4d323fb,
     type: 3}
   spawnInterval: 1
@@ -17305,27 +17141,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 20
-  fast: 11
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 20
+  fastSpeed: 11
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1309664311017220, guid: e2098453fe13319449cf36d39a67cdfb,
     type: 3}
   spawnInterval: 1
@@ -17465,27 +17297,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 1287581152}
-  spawn2: {fileID: 516551996}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1974605130462110, guid: bdadc45c4c9922b45a1b0545a8acad64,
     type: 3}
   spawnInterval: 1
@@ -17952,27 +17780,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 20
-  fast: 11
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 20
+  fastSpeed: 11
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1309664311017220, guid: e2098453fe13319449cf36d39a67cdfb,
     type: 3}
   spawnInterval: 1
@@ -18019,27 +17843,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e703d55d618ed5749bca2ed856dbc0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slow: 10
-  fast: 1
-  time: 0
-  timer: 0
-  rate: 0
-  lol: 0
-  col: {fileID: 1649196125}
-  cas1: {fileID: 499340585}
-  cas2: {fileID: 856911765}
-  of: {fileID: 1147068333}
-  cac: {fileID: 810070787}
-  scene1: {fileID: 1998020014}
-  scene2: {fileID: 344529445}
-  scene3: {fileID: 49174089}
-  scene4: {fileID: 1072940554}
-  sound1: {fileID: 143531532}
-  sound2: {fileID: 334453900}
-  sound3: {fileID: 757269126}
-  sound4: {fileID: 830386379}
-  spawn1: {fileID: 695648231}
-  spawn2: {fileID: 695648231}
+  slowSpeed: 10
+  fastSpeed: 1
+  spawnRate: 1
+  sphereColor: {fileID: 852482891}
+  defaultCastle: {fileID: 499340585}
+  corruptCastle: {fileID: 856911765}
+  specialEnemySpawner: {fileID: 1147068333}
+  cactusSpawner: {fileID: 810070787}
+  defaultScene: {fileID: 1998020014}
+  desertScene: {fileID: 344529445}
+  crimsonScene: {fileID: 49174089}
+  corruptScene: {fileID: 1072940554}
+  defaultSound: {fileID: 143531532}
+  desertSound: {fileID: 334453900}
+  crimsonSound: {fileID: 757269126}
+  corruptSound: {fileID: 830386379}
+  foodSpawner: {fileID: 695648231}
   prefabToSpawn: {fileID: 1894677339922658, guid: e6cd6fb7a72fbed4fb6a91f073c74751,
     type: 3}
   spawnInterval: 1
