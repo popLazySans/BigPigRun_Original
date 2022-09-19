@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Appearance_to_Point : MonoBehaviour
 {
-	public Set_Appearance appearance;
-	public Point point;
+	private Set_Appearance appearance;
+	private Point point;
     // Start is called before the first frame update
     void Start()
     {

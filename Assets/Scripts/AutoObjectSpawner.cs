@@ -46,7 +46,7 @@ public class AutoObjectSpawner : MonoBehaviour
 	}
 	void Update()
 	{
-		sc = PlayerSuvive.sc;
+		sc = WaveAndStage.stage;
 		CheckSceneCondition();
 	}
 

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Set_Ranking : MonoBehaviour
 {
+    public int ScoreNo1;
+    public int ScoreNo2;
+    public int ScoreNo3;
+    public int ScoreNo4;
+    public int ScoreNo5;
     // Start is called before the first frame update
     void Start()
     {

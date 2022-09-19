@@ -24,7 +24,7 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		score = PlayerSuvive.score_point;
+		score = Point.score_point;
 	}
 	public void Reset(){
 		PlayerPrefs.DeleteKey ("HighScore1");

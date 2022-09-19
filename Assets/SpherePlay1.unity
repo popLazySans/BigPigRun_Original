@@ -17517,8 +17517,17 @@ GameObject:
   - component: {fileID: 2110101403}
   - component: {fileID: 2110101409}
   - component: {fileID: 2110101404}
-  - component: {fileID: 2110101410}
+  - component: {fileID: 2110101420}
+  - component: {fileID: 2110101419}
+  - component: {fileID: 2110101418}
   - component: {fileID: 2110101411}
+  - component: {fileID: 2110101417}
+  - component: {fileID: 2110101416}
+  - component: {fileID: 2110101415}
+  - component: {fileID: 2110101414}
+  - component: {fileID: 2110101413}
+  - component: {fileID: 2110101412}
+  - component: {fileID: 2110101410}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Player
@@ -17668,60 +17677,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110101402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aa19f9b9cc6e71489508ea64dd28f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ccc2f8fc127c747880125260827d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point_current: 2000
-  point_maximum: 0
-  point_minimum: 0
-  current_amout_burn: 0
-  current_weight_decrease: 0
-  complete_panel: {fileID: 2062809753}
-  Point_panel: {fileID: 65544817}
-  Green_weighter: {fileID: 1442214959}
-  Red_weighter: {fileID: 1093058261}
-  Pause_Button: {fileID: 1007196059}
-  Score_panel: {fileID: 180394155}
-  Burn_amout_panel: {fileID: 1846089205}
-  Weight_decreased_panel: {fileID: 2078067843}
-  highScore: {fileID: 1880390131}
-  failed_BG: {fileID: 473384453}
-  Poison_diePanel: {fileID: 676864074}
-  Hungry_diePanel: {fileID: 857029751}
-  Fat_diePanel: {fileID: 1325118576}
-  NotPass_diePanel: {fileID: 704438937}
-  DontGetDocter_diePanel: {fileID: 548932766}
-  Calories_slide: {fileID: 1943519311}
-  hamburger_picture: {fileID: 1066307712}
-  chicken_picture: {fileID: 956833065}
-  pineapple_picture: {fileID: 553567441}
-  vegetable_picture: {fileID: 280075092}
-  rice_picture: {fileID: 1775609431}
-  watermelon_picture: {fileID: 1371081413}
-  mushroom_picture: {fileID: 1638546081}
-  itemName: {fileID: 2099516783}
-  itemProtein: {fileID: 113363709}
-  itemCarbohydrate: {fileID: 1490898687}
-  itemTranfat: {fileID: 725428925}
-  itemVitamin: {fileID: 1322690849}
   freqTime: 0.01
-  height: 0
-  weight: 0
-  gender: 0
-  age: 0
-  name: 
-  minimum_calories_text: {fileID: 986086488}
-  maximum_calories_text: {fileID: 1481369493}
-  protein_text: {fileID: 2059591130}
-  carbohydrate_text: {fileID: 496660237}
-  vintamin_text: {fileID: 539098162}
-  tranfat_text: {fileID: 792783569}
-  food_detail_panel: {fileID: 271872572}
-  ScoreNo1: 0
-  ScoreNo2: 0
-  ScoreNo3: 0
-  ScoreNo4: 0
-  ScoreNo5: 0
 --- !u!114 &2110101411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17735,6 +17694,164 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0
+--- !u!114 &2110101412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a41dad917c0d944a3198601fbb67c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2110101413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc460499a9cbae84ea2d89dd620ec5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2110101414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9a3eefca58faa44aa669e9796a0ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreNo1: 0
+  ScoreNo2: 0
+  ScoreNo3: 0
+  ScoreNo4: 0
+  ScoreNo5: 0
+--- !u!114 &2110101415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c8fd1cafba76940b433e7546fb823c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gender: 0
+  age: 0
+  name: 
+  height: 0
+  weight: 0
+--- !u!114 &2110101416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919ac1e9caa58f04fa535b8ec890a36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimum_calories_text: {fileID: 986086488}
+  maximum_calories_text: {fileID: 1481369493}
+  Calories_slide: {fileID: 1943519311}
+  highScore: {fileID: 1880390131}
+  Green_weighter: {fileID: 1442214959}
+  Red_weighter: {fileID: 1093058261}
+  itemName: {fileID: 2099516783}
+  itemProtein: {fileID: 113363709}
+  itemCarbohydrate: {fileID: 1490898687}
+  itemTranfat: {fileID: 725428925}
+  itemVitamin: {fileID: 1322690849}
+  hamburger_picture: {fileID: 1066307712}
+  chicken_picture: {fileID: 956833065}
+  pineapple_picture: {fileID: 553567441}
+  vegetable_picture: {fileID: 280075092}
+  rice_picture: {fileID: 1775609431}
+  watermelon_picture: {fileID: 1371081413}
+  mushroom_picture: {fileID: 1638546081}
+  food_detail_panel: {fileID: 271872572}
+  Score_panel: {fileID: 180394155}
+  Burn_amout_panel: {fileID: 1846089205}
+  Weight_decreased_panel: {fileID: 2078067843}
+  protein_text: {fileID: 2059591130}
+  carbohydrate_text: {fileID: 496660237}
+  vintamin_text: {fileID: 539098162}
+  tranfat_text: {fileID: 792783569}
+  Point_panel: {fileID: 65544817}
+  complete_panel: {fileID: 2062809753}
+  Pause_Button: {fileID: 1007196059}
+--- !u!114 &2110101417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eeddbba9c4decd4e87a909459e01ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point_current: 2000
+  point_maximum: 0
+  point_minimum: 0
+  current_amout_burn: 0
+  current_weight_decrease: 0
+--- !u!114 &2110101418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52532c9ef028cfc4492bb210300b0111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2110101419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d204a2e0dac5347888e3f8b7145eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  failed_BG: {fileID: 473384453}
+  Poison_diePanel: {fileID: 676864074}
+  Hungry_diePanel: {fileID: 857029751}
+  Fat_diePanel: {fileID: 1325118576}
+  NotPass_diePanel: {fileID: 704438937}
+  DontGetDocter_diePanel: {fileID: 548932766}
+--- !u!114 &2110101420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110101402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886372630a6e2594c9c285266af6d946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111220809
 GameObject:
   m_ObjectHideFlags: 0

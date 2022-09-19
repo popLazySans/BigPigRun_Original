@@ -7,7 +7,7 @@ public class Point_UI : MonoBehaviour
 {
     public Text minimum_calories_text;
     public Text maximum_calories_text;
-    public Point pointManager;
+    private Point pointManager;
     public Slider Calories_slide;
     public static float point_toStatic;
     public Text highScore;
@@ -37,7 +37,9 @@ public class Point_UI : MonoBehaviour
     public Text vintamin_text;
     public Text tranfat_text;
     public GameObject Point_panel;
+    public GameObject complete_panel;
 
+    public GameObject Pause_Button;
 
     // Start is called before the first frame update
     void Start()
@@ -126,5 +128,17 @@ public class Point_UI : MonoBehaviour
         vintamin_text.text = "Vitamin " + Point.Vitamin_value.ToString() + " kCal";
         tranfat_text.text = "Fat " + Point.Tranfat_value.ToString() + " kCal";
         Point_panel.GetComponent<Text>().text = pointManager.point_current.ToString() + " kCal";
+    }
+    public void Set_item_text(string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text)
+    {
+        itemName.text = itemN_text;
+        itemProtein.text = itemP_text;
+        itemCarbohydrate.text = itemC_text;
+        itemTranfat.text = itemO_text;
+        itemVitamin.text = itemV_text;
+    }
+    public void Set_item_active(bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
+    {
+        food_detail_panel.SetActive(black_bool); hamburger_picture.SetActive(I1_bool); chicken_picture.SetActive(I2_bool); pineapple_picture.SetActive(I3_bool); vegetable_picture.SetActive(I4_bool); rice_picture.SetActive(I5_bool); watermelon_picture.SetActive(I6_bool); mushroom_picture.SetActive(I7_bool);
     }
 }

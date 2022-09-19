@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Cause_of_Die : MonoBehaviour
 {
-	public Point pointManager;
+	private Point pointManager;
 	public GameObject failed_BG;
 	public GameObject Poison_diePanel;
 	public GameObject Hungry_diePanel;
@@ -12,8 +12,7 @@ public class Cause_of_Die : MonoBehaviour
 	public GameObject NotPass_diePanel;
 	public GameObject DontGetDocter_diePanel;
 	public static int TranfatCheck;
-	public GameObject Pause_Button;
-	public Point_UI UI;
+	private Point_UI UI;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -71,7 +70,7 @@ public class Cause_of_Die : MonoBehaviour
 	public void show_died_text()
 	{
 		UI.Summary_text();
-		Pause_Button.SetActive(false);
+		UI.Pause_Button.SetActive(false);
 		Time.timeScale = 0;
 		UI.Item_text_Disable();
 		UI.Set_item_object();

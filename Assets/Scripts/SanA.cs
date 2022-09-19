@@ -33,7 +33,7 @@ public class SanA : MonoBehaviour {
 
 	public void NumTran() 
 	{
-		mT = PlayerSuvive.point_origin * 0.3f;
+		mT = Point.point_origin * 0.3f;
 	}
 	public void NumPro()
 	{
@@ -41,14 +41,14 @@ public class SanA : MonoBehaviour {
 	}
 	public void NumCarbo()
 	{
-		mC = (PlayerSuvive.point_origin - mT) - mP;
+		mC = (Point.point_origin - mT) - mP;
 	}
 	public void Nutrial()
 	{
-		tran = PlayerSuvive.Tranfat_value;
-		pro = PlayerSuvive.Protein_value;
-		vit = PlayerSuvive.Vitamin_value;
-		carbo = PlayerSuvive.Carbo_value;
+		tran = Point.Tranfat_value;
+		pro = Point.Protein_value;
+		vit = Point.Vitamin_value;
+		carbo = Point.Carbo_value;
 	}
 	public void NuttialBar() 
 	{
@@ -64,21 +64,21 @@ public class SanA : MonoBehaviour {
 	{
 		if (tran > mT && pro > mP && carbo > mC)
 		{
-			PlayerSuvive.TranfatCheck = 1;
+			Point.tranfat_check = 1;
 		}
 		else
 		{
-			PlayerSuvive.TranfatCheck = 0;
+			Point.tranfat_check = 0;
 		}
 	}
 	public void Ultimate() 
 	{
 		if (vit >= 100 && Input.GetKeyDown(jump))
 		{
-			PlayerSuvive.Tranfat_value = 0;
-			PlayerSuvive.Protein_value = 0;
-			PlayerSuvive.Carbo_value = 0;
-			PlayerSuvive.Vitamin_value = 0;
+			Point.Tranfat_value = 0;
+			Point.Protein_value = 0;
+			Point.Carbo_value = 0;
+			Point.Vitamin_value = 0;
 			lockPoint = 1;
 		}
 	}

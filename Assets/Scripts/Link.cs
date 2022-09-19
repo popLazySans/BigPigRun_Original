@@ -40,12 +40,12 @@ public class Link : MonoBehaviour {
 		SceneManager.LoadScene ("main");
 		off = 0;
 		PlayerMovementScript.oil = 0;
-		PlayerSuvive.sc = 1;
-		PlayerSuvive.score_point = 0;
-		PlayerSuvive.Tranfat_value = 0;
-		PlayerSuvive.Carbo_value = 0;
-		PlayerSuvive.Protein_value = 0;
-		PlayerSuvive.Vitamin_value = 0;
+		WaveAndStage.stage = 1;
+		Point.score_point = 0;
+		Point.Tranfat_value = 0;
+		Point.Carbo_value = 0;
+		Point.Protein_value = 0;
+		Point.Vitamin_value = 0;
 		tm =1;
 		AutoObjectSpawnerLock.die = 0;
 	}
@@ -97,15 +97,15 @@ public class Link : MonoBehaviour {
 	public void Restart(){
 		
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name, LoadSceneMode.Single);
-		PlayerSuvive.score_point = 0;
+		Point.score_point = 0;
 		tm = 1;
 		PlayerMovementScript.oil = 0;
-		PlayerSuvive.sc = 1;
+		WaveAndStage.stage = 1;
 		AutoObjectSpawnerLock.die = 0;
-		PlayerSuvive.Tranfat_value = 0;
-		PlayerSuvive.Carbo_value = 0;
-		PlayerSuvive.Protein_value = 0;
-		PlayerSuvive.Vitamin_value = 0;
+		Point.Tranfat_value = 0;
+		Point.Carbo_value = 0;
+		Point.Protein_value = 0;
+		Point.Vitamin_value = 0;
 	}
 	public void Gen()
 	{
@@ -115,7 +115,7 @@ public class Link : MonoBehaviour {
 		SceneManager.LoadScene ("cut");
 	}
 	public void comTwo(){
-		PlayerSuvive.tutorial_pass = 3;
+		Tutorial_DoctorCheck.tutorial_pass = 3;
 	}
 	public void LinkToTuTwo(){
 		SceneManager.LoadScene ("SpherePlayTest");
