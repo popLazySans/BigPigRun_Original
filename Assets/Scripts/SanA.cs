@@ -4,65 +4,65 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SanA : MonoBehaviour {
 	
-	private float tran;
-	private float pro;
-	private float vit;
-	private float carbo;
-	public Slider trbar;
-	public Slider Pbar;
-	public Slider Cbar;
-	public Slider Vbar;
-	public float mT;
-	public float mP;
-	public float mV;
-	public float mC;
+	private float Transfat;
+	private float Protein;
+	private float Vitamin;
+	private float Carbohydrate;
+	public Slider TransFatBar;
+	public Slider ProteinBar;
+	public Slider CarbohydrateBar;
+	public Slider VitaminBar;
+	public float CalculateTransFat;
+	public float CalculateProtein;
+	public float CalculateVitamin;
+	public float CalculateCarbohydrate;
 	public KeyCode jump;
 	public static float lockPoint;
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		NumTran();
-		NumPro();
-		NumCarbo();
+		NumberTransFat();
+		NumberProtein();
+		NumberCarbohydrate();
 		Nutrial();
 		NuttialBar();
 		Life();
 		Ultimate();
 	}
 
-	public void NumTran() 
+	public void NumberTransFat() 
 	{
-		mT = PlayerSuvive.poL * 0.3f;
+		CalculateTransFat = PlayerSuvive.poL * 0.3f;
 	}
-	public void NumPro()
+	public void NumberProtein()
 	{
-		mP = PlayerPrefs.GetFloat("Weight", 0) * 8;
+		CalculateProtein = PlayerPrefs.GetFloat("Weight", 0) * 8;
 	}
-	public void NumCarbo()
+	public void NumberCarbohydrate()
 	{
-		mC = (PlayerSuvive.poL - mT) - mP;
+		CalculateCarbohydrate = (PlayerSuvive.poL - CalculateTransFat) - CalculateProtein;
 	}
 	public void Nutrial()
 	{
-		tran = PlayerSuvive.trans;
-		pro = PlayerSuvive.protein;
-		vit = PlayerSuvive.vin;
-		carbo = PlayerSuvive.car;
+		Transfat = PlayerSuvive.trans;
+		Protein = PlayerSuvive.protein;
+		Vitamin = PlayerSuvive.vin;
+		Carbohydrate = PlayerSuvive.car;
 	}
 	public void NuttialBar() 
 	{
-		trbar.value = tran;
-		Pbar.value = pro;
-		Vbar.value = vit;
-		Cbar.value = carbo;
-		Pbar.maxValue = mP;
-		trbar.maxValue = mT;
-		Cbar.maxValue = mC;
+		TransFatBar.value = Transfat;
+		ProteinBar.value = Protein;
+		VitaminBar.value = Vitamin;
+		CarbohydrateBar.value = Carbohydrate;
+		ProteinBar.maxValue = CalculateProtein;
+		TransFatBar.maxValue = CalculateTransFat;
+		CarbohydrateBar.maxValue = CalculateCarbohydrate;
 	}
 	public void Life() 
 	{
-		if (tran > mT && pro > mP && carbo > mC)
+		if (Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate)
 		{
 			PlayerSuvive.sanCheck = 1;
 		}
@@ -73,7 +73,7 @@ public class SanA : MonoBehaviour {
 	}
 	public void Ultimate() 
 	{
-		if (vit >= 100 && Input.GetKeyDown(jump))
+		if (Vitamin >= 100 && Input.GetKeyDown(jump))
 		{
 			PlayerSuvive.trans = 0;
 			PlayerSuvive.protein = 0;
