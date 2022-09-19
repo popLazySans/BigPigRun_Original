@@ -5,10 +5,12 @@ using UnityEngine;
 public class Appearance_to_Point : MonoBehaviour
 {
 	public Set_Appearance appearance;
+	public Point point;
     // Start is called before the first frame update
     void Start()
     {
 		appearance = GetComponent<Set_Appearance>();
+		point = GetComponent<Point>();
 		checkGender();
 	}
 
@@ -24,10 +26,10 @@ public class Appearance_to_Point : MonoBehaviour
 	}
 	public void Man_Calculator()
 	{
-		point_current = ((10f * height) + (6.25f * weight) - (5f * age) + 5f) * 1.2f;
+		point.point_current = ((10f * appearance.height) + (6.25f * appearance.weight) - (5f * appearance.age) + 5f) * 1.2f;
 	}
 	public void Woman_Calculator()
 	{
-		point_current = ((10f * height) + (6.25f * weight) - (5f * age) - 161f) * 1.2f;
+		point.point_current = ((10f * appearance.height) + (6.25f * appearance.weight) - (5f * appearance.age) - 161f) * 1.2f;
 	}
 }

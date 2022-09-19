@@ -8,8 +8,14 @@ public class Point : MonoBehaviour
     public static float point_origin;
     public float point_maximum;
     public float point_minimum;
+    public static float score_point;
     public int current_amout_burn;
     public float current_weight_decrease;
+
+    public static float Tranfat_value;
+    public static float Protein_value;
+    public static float Carbo_value;
+    public static float Vitamin_value;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +31,7 @@ public class Point : MonoBehaviour
     {
         point_origin = point_current;
         SetLowandHightCal();
-        SetCalText();
-        SetCalBar();
+
     }
     public void SetLowandHightCal()
     {
@@ -36,9 +41,6 @@ public class Point : MonoBehaviour
     public void SettingValue()
     {
         current_weight_decrease = current_amout_burn / 7700f;
-        HightScore_Current();
-        SetValueToPoint();
-        Set_Nutrients_text();
     }
     public void count_calculate()
     {
