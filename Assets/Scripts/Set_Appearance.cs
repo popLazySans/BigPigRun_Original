@@ -4,15 +4,51 @@ using UnityEngine;
 
 public class Set_Appearance : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int gender;
+    public int age;
+    public string name;
+    public float height;
+    public float weight;
     void Start()
     {
-        
+        SetAppearance();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+    public void SetAppearance()
+    {
+        gender = SetGender();
+        age = SetAge();
+        height = SetHeight();
+        weight = SetWeight();
+        name = SetName();
+    }
+	public int SetGender()
+	{
+		int gender = PlayerPrefs.GetInt("Gender", 0);
+		return gender;
+	}
+	public int SetAge()
+	{
+		int age = PlayerPrefs.GetInt("Age", 0);
+		return age;
+	}
+	public float SetHeight()
+	{
+		float height = PlayerPrefs.GetFloat("Height", 0);
+		return height;
+	}
+	public float SetWeight()
+	{
+		float weight = PlayerPrefs.GetFloat("weight", 0);
+		return weight;
+	}
+	public string SetName()
+	{
+		string name = PlayerPrefs.GetString("Name", "");
+		return name;
+	}
 }
