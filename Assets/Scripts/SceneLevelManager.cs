@@ -75,6 +75,7 @@ public class SceneLevelManager : MonoBehaviour
 	public void SetCrimsonScene()
 	{
 		ChangeActiveGameObject(desertSound, crimsonSound);
+		ChangeActiveGameObject(desertScene, crimsonScene );
 		cactusSpawner.SetActive(false);
 		SetMaterialColor(255, 49, 49, 1);
 	}
