@@ -10,12 +10,12 @@ public class ObjectMovementScript : MonoBehaviour {
 	private Vector3 moveDirection;
 	// Update is called once per frame
 	void Update () {
-		if (AutoObjectSpawner.sc >= 4 && lk == 0) 
+		if (SceneLevelManager.currentScene >= 4 && lk == 0) 
 		{
 			speed += 1; 
 			lk = 1;
 			}
-		if (AutoObjectSpawner.sc >= 4 && lk == 1) 
+		if (SceneLevelManager.currentScene >= 4 && lk == 1) 
 		{
 			speed += 0.0005f; 
 			lk = 1;
