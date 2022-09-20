@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Score : MonoBehaviour {
 
-	public Text best1;
-	public Text namest1;
-	public Text best2;
-	public Text namest2;
-	public Text best3;
-	public Text namest3;
-	public Text best4;
-	public Text namest4;
-	public Text best5;
-	public Text namest5;
+	public Text BestScore1;
+	public Text NameBestScoreNo1;
+	public Text BestScore2;
+	public Text NameBestScoreNo2;
+	public Text BestScore3;
+	public Text NameBestScoreNo3;
+	public Text BestScore4;
+	public Text NameBestScoreNo4;
+	public Text BestScore5;
+	public Text NameBestScoreNo5;
 	public float score;
 	// Use this for initialization
 	void Start () 
@@ -41,19 +41,19 @@ public class Score : MonoBehaviour {
 
 	public void BestScore() 
 	{
-		best1.text = PlayerPrefs.GetFloat("HighScore1", 0).ToString() + " km";
-		best2.text = PlayerPrefs.GetFloat("HighScore2", 0).ToString() + " km";
-		best3.text = PlayerPrefs.GetFloat("HighScore3", 0).ToString() + " km";
-		best4.text = PlayerPrefs.GetFloat("HighScore4", 0).ToString() + " km";
-		best5.text = PlayerPrefs.GetFloat("HighScore5", 0).ToString() + " km";
+		BestScore1.text = PlayerPrefs.GetFloat("HighScore1", 0).ToString() + " km";
+		BestScore2.text = PlayerPrefs.GetFloat("HighScore2", 0).ToString() + " km";
+		BestScore3.text = PlayerPrefs.GetFloat("HighScore3", 0).ToString() + " km";
+		BestScore4.text = PlayerPrefs.GetFloat("HighScore4", 0).ToString() + " km";
+		BestScore5.text = PlayerPrefs.GetFloat("HighScore5", 0).ToString() + " km";
 	}
 
 	public void NameBestScore() 
 	{
-		namest1.text = PlayerPrefs.GetString("Namest1", "");
-		namest2.text = PlayerPrefs.GetString("Namest2", "");
-		namest3.text = PlayerPrefs.GetString("Namest3", "");
-		namest4.text = PlayerPrefs.GetString("Namest4", "");
-		namest5.text = PlayerPrefs.GetString("Namest5", "");
+		NameBestScoreNo1.text = PlayerPrefs.GetString("Namest1", "");
+		NameBestScoreNo2.text = PlayerPrefs.GetString("Namest2", "");
+		NameBestScoreNo3.text = PlayerPrefs.GetString("Namest3", "");
+		NameBestScoreNo4.text = PlayerPrefs.GetString("Namest4", "");
+		NameBestScoreNo5.text = PlayerPrefs.GetString("Namest5", "");
 	}
 }

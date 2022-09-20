@@ -11435,14 +11435,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c95f0a0b5546641ba87e3f28d5b64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trbar: {fileID: 1134293982}
-  Pbar: {fileID: 1899486390}
-  Cbar: {fileID: 72122453}
-  Vbar: {fileID: 332179647}
-  mT: 0
-  mP: 0
-  mV: 0
-  mC: 0
+  Transfat: 0
+  Protein: 0
+  Vitamin: 0
+  Carbohydrate: 0
+  TransFatBar: {fileID: 0}
+  ProteinBar: {fileID: 0}
+  CarbohydrateBar: {fileID: 0}
+  VitaminBar: {fileID: 0}
+  CalculateTransFat: 0
+  CalculateProtein: 0
+  CalculateVitamin: 0
+  CalculateCarbohydrate: 0
   jump: 32
 --- !u!1 &1322690847
 GameObject:
