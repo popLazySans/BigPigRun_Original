@@ -10991,6 +10991,7 @@ GameObject:
   - component: {fileID: 1321471670}
   - component: {fileID: 1321471669}
   - component: {fileID: 1321471673}
+  - component: {fileID: 1321471674}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -11099,15 +11100,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c95f0a0b5546641ba87e3f28d5b64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trbar: {fileID: 1134293982}
-  Pbar: {fileID: 1899486390}
-  Cbar: {fileID: 72122453}
-  Vbar: {fileID: 332179647}
-  mT: 0
-  mP: 0
-  mV: 0
-  mC: 0
+  Transfat: 0
+  Protein: 0
+  Vitamin: 0
+  Carbohydrate: 0
+  TransFatBar: {fileID: 1134293982}
+  ProteinBar: {fileID: 1899486390}
+  CarbohydrateBar: {fileID: 72122453}
+  VitaminBar: {fileID: 332179647}
+  CalculateTransFat: 0
+  CalculateProtein: 0
+  CalculateVitamin: 0
+  CalculateCarbohydrate: 0
   jump: 32
+--- !u!114 &1321471674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321471668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 800c4514cd7a82d42b20f38e354b25dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322690847
 GameObject:
   m_ObjectHideFlags: 0
