@@ -22,15 +22,16 @@ public class Set_Ranking : MonoBehaviour
     }
     public void HightScore_Current()
     {
-        Rank_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1", ScoreNo5, ScoreNo4, ScoreNo3, ScoreNo2, ScoreNo1);
+        Ranking_Checker rankData = new Ranking_Checker("HighScore5", "Namest5", "HighScore4", "Namest4", "HighScore3", "Namest3", "HighScore2", "Namest2", "HighScore1", "Namest1", ScoreNo5, ScoreNo4, ScoreNo3, ScoreNo2, ScoreNo1);
+        Rank_Checker(rankData);
     }
-    public void Rank_Checker(string rankScore5, string rankName5, string rankScore4, string rankName4, string rankScore3, string rankName3, string rankScore2, string rankName2, string rankScore1, string rankName1, int scoreLock5, int scoreLock4, int scoreLock3, int scoreLock2, int scoreLock1)
+    public void Rank_Checker(Ranking_Checker ranking)
     {
-        if (UpToFive(rankScore5)){Update_Ranking(rankScore4, rankName4, rankScore5, rankName5, "", "", scoreLock5);
-            if (UpToFour(rankScore4)){Update_Ranking(rankScore3, rankName3, rankScore4, rankName4, rankScore5, rankName5, scoreLock4);
-                    if (UpToThree(rankScore3)){Update_Ranking(rankScore2, rankName2, rankScore3, rankName3, rankScore4, rankName4, scoreLock3);
-                            if (UpToTwo(rankScore2)){Update_Ranking(rankScore1, rankName1, rankScore2, rankName2, rankScore3, rankName3, scoreLock2);
-                                   if (UpToOne(rankScore1)) { Update_Ranking("", "", rankScore1, rankName1, rankScore2, rankName2, scoreLock1); }}}}}
+        if (UpToFive(ranking.rankScore5)){Update_Ranking(ranking.rankScore4, ranking.rankName4, ranking.rankScore5, ranking.rankName5, "", "", ranking.scoreLock5);
+            if (UpToFour(ranking.rankScore4)){Update_Ranking(ranking.rankScore3, ranking.rankName3,ranking.rankScore4,ranking.rankName4,ranking.rankScore5,ranking.rankName5,ranking.scoreLock4);
+                    if (UpToThree(ranking.rankScore3)){Update_Ranking(ranking.rankScore2,ranking.rankName2,ranking.rankScore3,ranking.rankName3,ranking.rankScore4,ranking.rankName4,ranking.scoreLock3);
+                            if (UpToTwo(ranking.rankScore2)){Update_Ranking(ranking.rankScore1,ranking.rankName1,ranking.rankScore2,ranking.rankName2,ranking.rankScore3,ranking.rankName3,ranking.scoreLock2);
+                                   if (UpToOne(ranking.rankScore1)) { Update_Ranking("", "",ranking.rankScore1,ranking.rankName1,ranking.rankScore2,ranking.rankName2,ranking.scoreLock1); }}}}}
     }
     public bool UpToFive(string rankScore5){return Point.score_point > PlayerPrefs.GetFloat(rankScore5, 0);}
     public bool UpToFour(string rankScore4) { return Point.score_point > PlayerPrefs.GetFloat(rankScore4, 0);}
