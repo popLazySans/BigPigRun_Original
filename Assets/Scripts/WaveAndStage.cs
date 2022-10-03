@@ -25,8 +25,12 @@ public class WaveAndStage : MonoBehaviour
     }
     public void Doctor_check()
     {
-        if (pointManager.point_current >= pointManager.point_minimum && pointManager.point_current <= pointManager.point_maximum) { Doctor_complete_check(); }
+        if (middlePoint()) { Doctor_complete_check(); }
         else { Doctor_die_check(); }
+    }
+    public bool middlePoint()
+    {
+        return pointManager.point_current >= pointManager.point_minimum && pointManager.point_current <= pointManager.point_maximum;
     }
     public void Doctor_complete_check()
     {

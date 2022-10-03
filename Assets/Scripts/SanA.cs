@@ -41,7 +41,7 @@ public class SanA : MonoBehaviour {
 	
 	public void Life() 
 	{
-		if (Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate)
+		if (overNutrient())
 		{
 			Point.tranfat_check = 1;
 		}
@@ -49,10 +49,16 @@ public class SanA : MonoBehaviour {
 		{
 			Point.tranfat_check = 0;
 		}
+	} 
+	public bool overNutrient()
+    {
+		return Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate;
+
 	}
+
 	public void Ultimate() 
 	{
-		if (Vitamin >= 100 && Input.GetKeyDown(jump))
+		if (jumpCheck())
 		{
 			Point.Tranfat_value = 0;
 			Point.Protein_value = 0;
@@ -60,5 +66,10 @@ public class SanA : MonoBehaviour {
 			Point.Vitamin_value = 0;
 			lockPoint = 1;
 		}
+	}
+	public bool jumpCheck()
+    {
+		return Vitamin >= 100 && Input.GetKeyDown(jump);
+
 	}
 }
