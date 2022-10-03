@@ -8,8 +8,27 @@ public class CollisionObject : MonoBehaviour
 	private Point pointManager;
 	private Point_UI UI;
 	private WaveAndStage Wave;
-    // Start is called before the first frame update
-    void Start()
+	public float point_plus;
+	public int Oil_plus;
+	public float trans_plus;
+	public float protein_plus;
+	public float car_plus;
+	public float vin_plus;
+	public string itemN_text;
+	public string itemP_text;
+	public string itemC_text;
+	public string itemO_text;
+	public string itemV_text;
+	public bool black_bool;
+	public bool I1_bool;
+	public bool I2_bool;
+	public bool I3_bool;
+	public bool I4_bool;
+	public bool I5_bool;
+	public bool I6_bool;
+	public bool I7_bool;
+	// Start is called before the first frame update
+	void Start()
     {
 		DieManager = GetComponent<Cause_of_Die>();
 		pointManager = GetComponent<Point>();
@@ -20,10 +39,13 @@ public class CollisionObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 	void OnCollisionEnter(Collision other)
 	{
+		var tryGetReceiver = other.collider.GetComponent<OnTriggerReceiver>();
+		if (tryGetReceiver != null)
+			tryGetReceiver.NotifyOnTriggerEnter();
+		Food_detail();
 		object_group(other);
 		Doctor(other);
 		
@@ -32,20 +54,17 @@ public class CollisionObject : MonoBehaviour
 	public void object_group(Collision other)
 	{
 		fat_group(other);
-		fruit_veget_group(other);
-		Mushroom_group(other);
+		//fruit_veget_group(other);
+		//Mushroom_group(other);
 		Enemy_group(other);
 	}
 	public void fat_group(Collision other)
 	{
-		Burger(other);
-		Chicken(other);
+		//Burger(other);
+		//Chicken(other);
 	}
-	public void Burger(Collision other)
-	{
-		if (other.gameObject.tag == "Burger") { Food_detail(other, 885, 2, 378, 204, 288, 0, "885 kCal", "Protein 204 kCal", "Carbohydrate 288 kCal", "Fat 378 kCal", "Vitamin 0 Energy", true, true, false, false, false, false, false, false); }
-	}
-	public void Chicken(Collision other)
+
+	/*public void Chicken(Collision other)
 	{
 		if (other.gameObject.tag == "Chicken") { Food_detail(other, 738, 1, 324, 360, 22, 0, "738 kCal", "Protein 360 kCal", "Carbohydrate 22 kCal", "Fat 324 kCal", "Vitamin 0 Energy", true, false, true, false, false, false, false, false); }
 	}
@@ -80,7 +99,7 @@ public class CollisionObject : MonoBehaviour
 	public void White_mushroom(Collision other)
 	{
 		if (other.gameObject.tag == "Mushroom1") { Food_detail(other, 67, -1, 8, 37, 40, 5, "67 kCal", "Protein 37 kCal", "Carbohydrate 40 kCal", "Fat 8 kCal", "Vitamin 5 Energy", true, false, false, false, false, false, false, true); }
-	}
+	}*/
 	public void Red_mushroom(Collision other)
 	{
 		if (other.gameObject.tag == "Mushroom2")
@@ -91,9 +110,8 @@ public class CollisionObject : MonoBehaviour
 			DieManager.show_died_text();
 		}
 	}
-	public void Food_detail(Collision other, float point_plus, int Oil_plus, float trans_plus, float protein_plus, float car_plus, float vin_plus, string itemN_text, string itemP_text, string itemC_text, string itemO_text, string itemV_text, bool black_bool, bool I1_bool, bool I2_bool, bool I3_bool, bool I4_bool, bool I5_bool, bool I6_bool, bool I7_bool)
+	public void Food_detail()
 	{
-		Destroy(other.gameObject);
 		plus_value(point_plus, Oil_plus, trans_plus, protein_plus, car_plus, vin_plus);
 		UI.Set_item_text(itemN_text, itemP_text, itemC_text, itemO_text, itemV_text);
 		UI.Set_item_active(black_bool, I1_bool, I2_bool, I3_bool, I4_bool, I5_bool, I6_bool, I7_bool);
