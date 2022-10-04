@@ -26,7 +26,7 @@ public class AutoObjectSpawnerTest : MonoBehaviour
 	{
 		boxCollider2D = GetComponent<BoxCollider>();
 		 
-			StartCoroutine(SpawnObject());
+			StartCoroutine(SpawnObjectRoutine());
 			StartCoroutine (Fast ());
 
 	}
@@ -36,7 +36,7 @@ public class AutoObjectSpawnerTest : MonoBehaviour
 	}
 	
 	// This will spawn an object, and then wait some time, then spawn another...
-	IEnumerator SpawnObject ()
+	IEnumerator SpawnObjectRoutine ()
 	{
 		yield return new WaitForSeconds (rate);
 			while (true) {

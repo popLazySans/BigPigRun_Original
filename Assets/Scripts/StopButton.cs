@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StopButton : MonoBehaviour {
-	public bool pause;
+	public bool IsPause;
 	public GameObject tex ;
 	public int logTime;
 	public GameObject hide;
 	// Use this for initialization
 	void Start () {
 		tex.GetComponent<Text>().text ="Pause";
-		pause = false;
+		IsPause = false;
 		tex.SetActive (false);
 	}
 	
@@ -20,34 +20,38 @@ public class StopButton : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
-			pause = !pause;
+			IsPause = !IsPause;
 		}
-		if (pause) {
+		if (IsPause) {
 			hide.SetActive (true);
 			tex.SetActive (true);
 			Time.timeScale = 0;
 			logTime = 1;
-		} else if (!pause && logTime == 1) {
-			//StartCoroutine (timeLoss);
+		} else if (IsResume()) {
+			
 			Time.timeScale = 1;
 			logTime = 0;
 			hide.SetActive (false);
 			tex.SetActive (false);
 		}
 	}
+
+	bool IsResume()
+	{
+		return !IsPause && logTime == 1;
+	}
+
 	public void stop()
 	{
-		pause = !pause;
-		if (pause) {
+		IsPause = !IsPause;
+		if (IsPause) {
 			Time.timeScale = 0;
 			tex.SetActive (true);
-		} else if (!pause) {
-			//StartCoroutine (timeLoss);
+		} else if (!IsPause) {
+			
 			tex.SetActive (false);
 			Time.timeScale = 1;
 		}
 	}
-	/*IEnumerator timeLoss (){
-		yield return new WaitForSeconds (3f);
-	}*/
+
 }

@@ -42,6 +42,7 @@ public class SanA : MonoBehaviour {
 	public void Life() 
 	{
 		if (overNutrient())
+
 		{
 			Point.tranfat_check = 1;
 		}
@@ -55,7 +56,6 @@ public class SanA : MonoBehaviour {
 		return Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate;
 
 	}
-
 	public void Ultimate() 
 	{
 		if (jumpCheck())

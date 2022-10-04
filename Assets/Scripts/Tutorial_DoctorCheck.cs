@@ -53,11 +53,11 @@ public class Tutorial_DoctorCheck : MonoBehaviour
 	}
 	public void tutorial_doctor_check()
 	{
-		if (middlePoint_tutorial()) { tutorial_doctor_pass(); }
+		if (IsTutorialPass()) { tutorial_doctor_pass(); }
 		else { tutorial_doctor_fail(); }
 	}
-	public bool middlePoint_tutorial()
-    {
+	bool IsTutorialPass()
+	{
 		return pointManager.point_current >= pointManager.point_minimum && pointManager.point_current <= pointManager.point_maximum;
 	}
 	public void tutorial_doctor_pass()
@@ -73,4 +73,6 @@ public class Tutorial_DoctorCheck : MonoBehaviour
 		UI.Pause_Button.SetActive(false);
 		Time.timeScale = 0;
 	}
+
+
 }

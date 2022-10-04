@@ -39,8 +39,8 @@ public class SceneLevelManager : MonoBehaviour
 	{
 		if (currentScene == 2)
 		{
-			spawnObjectFunction.SetActiveSpawn();			
 			SetDesertScene();
+			spawnObjectFunction.SetActiveSpawn();
 			spawnObjectFunction.ChangeCurrentSpeed(10);
 		}
 	}

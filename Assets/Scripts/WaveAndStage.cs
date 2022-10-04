@@ -26,6 +26,7 @@ public class WaveAndStage : MonoBehaviour
     public void Doctor_check()
     {
         if (middlePoint()) { Doctor_complete_check(); }
+
         else { Doctor_die_check(); }
     }
     public bool middlePoint()

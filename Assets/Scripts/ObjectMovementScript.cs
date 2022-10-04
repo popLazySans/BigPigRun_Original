@@ -10,12 +10,12 @@ public class ObjectMovementScript : MonoBehaviour {
 	private Vector3 moveDirection;
 	// Update is called once per frame
 	void Update () {
-		if (SceneLevelManager.currentScene >= 4 && lk == 0) 
+		if (IsSpeedChange(4, 0)) 
 		{
 			speed += 1; 
 			lk = 1;
 			}
-		if (SceneLevelManager.currentScene >= 4 && lk == 1) 
+		if (IsSpeedChange(4, 1)) 
 		{
 			speed += 0.0005f; 
 			lk = 1;
@@ -30,5 +30,11 @@ public class ObjectMovementScript : MonoBehaviour {
 	{
 		GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
 	}
+
+	bool IsSpeedChange(int currentScene,int lkValue)
+	{
+		return SceneLevelManager.currentScene >= currentScene && lk == lkValue;
+	}
+
 
 }
