@@ -48,7 +48,7 @@ public class Tutorial_DoctorCheck : MonoBehaviour
 			UI.complete_panel.SetActive(true);
 			AutoObjectSpawnerLock.die = 0;
 			tutorial_doctor_check();
-			Wave.prepare_to_nextwave(other);
+			Wave.prepare_to_nextwave(other.gameObject);
 		}
 	}
 	public void tutorial_doctor_check()

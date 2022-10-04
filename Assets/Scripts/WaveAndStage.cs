@@ -45,10 +45,10 @@ public class WaveAndStage : MonoBehaviour
         DieManager.failed_BG.SetActive(true);
         DieManager.show_died_text();
     }
-    public void prepare_to_nextwave(Collision other)
+    public void prepare_to_nextwave(GameObject other)
     {
         StartCoroutine(twoSec());
-        Destroy(other.gameObject);
+        Destroy(gameObject);
     }
     IEnumerator twoSec()
     {
