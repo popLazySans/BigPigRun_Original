@@ -19,7 +19,7 @@ public class BGSoundScript : MonoBehaviour {
 
     void Awake()
     {
-        if (instance != null && instance != this)
+        if (IsGameObjectShouldDestroy())
         {
             Destroy(this.gameObject);
             return;
@@ -33,6 +33,12 @@ public class BGSoundScript : MonoBehaviour {
 
     }
     //Play Gobal End
+
+    bool IsGameObjectShouldDestroy()
+	{
+        return instance != null && instance != this;
+
+    }
 
     // Update is called once per frame
     void Update () {

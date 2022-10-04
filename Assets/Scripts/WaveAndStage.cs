@@ -25,7 +25,7 @@ public class WaveAndStage : MonoBehaviour
     }
     public void Doctor_check()
     {
-        if (pointManager.point_current >= pointManager.point_minimum && pointManager.point_current <= pointManager.point_maximum) { Doctor_complete_check(); }
+        if (IsCompleteCheck()) { Doctor_complete_check(); }
         else { Doctor_die_check(); }
     }
     public void Doctor_complete_check()
@@ -59,5 +59,11 @@ public class WaveAndStage : MonoBehaviour
            pointManager.count_calculate();
             if (stage == 3 && freqTime == 1) { freqTime = (freqTime) / 3; }
         }
+    }
+
+    bool IsCompleteCheck()
+	{
+        return pointManager.point_current >= pointManager.point_minimum && pointManager.point_current <= pointManager.point_maximum;
+
     }
 }

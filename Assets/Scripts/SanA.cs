@@ -41,7 +41,7 @@ public class SanA : MonoBehaviour {
 	
 	public void Life() 
 	{
-		if (Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate)
+		if (IsTranfatCheck())
 		{
 			Point.tranfat_check = 1;
 		}
@@ -50,6 +50,12 @@ public class SanA : MonoBehaviour {
 			Point.tranfat_check = 0;
 		}
 	}
+
+	bool IsTranfatCheck()
+	{
+		return Transfat > CalculateTransFat && Protein > CalculateProtein && Carbohydrate > CalculateCarbohydrate;
+	}
+
 	public void Ultimate() 
 	{
 		if (Vitamin >= 100 && Input.GetKeyDown(jump))

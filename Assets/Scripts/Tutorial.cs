@@ -39,28 +39,28 @@ public class Tutorial : MonoBehaviour {
 			PlayerPrefs.SetInt ("Scene", 12);
 			Tutorial_DoctorCheck.tutorial_pass = 0;
 		}
-		if (scene == 5 && loc == 1) {
+		if (IsTutorialSceneChange(5, 1)) {
 			t6.SetActive (false);
 			t7.SetActive (true);
-			StartCoroutine (threeSec ());
+			StartCoroutine (threeSecRoutine ());
 			loc = 0;
 		}
 		if (scene == 6) {
 			t7.SetActive (false);
 		}
-		if (scene == 7 && loc == 0) {
+		if (IsTutorialSceneChange(7, 0)) {
 			t8.SetActive (true);
-			StartCoroutine (threeSec ());
+			StartCoroutine (threeSecRoutine ());
 			loc = 1;
 		}
-		if (scene == 8 && loc ==1) {
+		if (IsTutorialSceneChange(8, 1)) {
 			t8.SetActive (false);
-			StartCoroutine (threeSec ());
+			StartCoroutine (threeSecRoutine ());
 			loc = 0;
 		}
-		if(scene == 9 && loc == 0){
+		if(IsTutorialSceneChange(9, 0))	{
 			t9.SetActive (true);
-			StartCoroutine (threeSec ());
+			StartCoroutine (threeSecRoutine ());
 			loc = 1;
 		}
 		if (scene == 10) 
@@ -101,23 +101,34 @@ public class Tutorial : MonoBehaviour {
 			t4.SetActive (false);
 			t5.SetActive (true);
 		}
-		if (scene == 4 && loc == 0) {
+		if (IsTutorialSceneChange(4, 0)) {
 			t5.SetActive (false);
 			t6.SetActive (true);
 			Time.timeScale = 1;
 			loc = 1;
-			StartCoroutine (threeSec ());
+			StartCoroutine (threeSecRoutine ());
 		}
 		if (scene == 12) {
 			PlayerPrefs.SetInt ("Scene", scene + 1);
 		}
-		if (scene > 0 && scene < 4) {
+		if (IsSceneInRange(0, 4)) {
 			PlayerPrefs.SetInt("Scene",scene+1);
 		}
 
 	}
-	IEnumerator threeSec(){
+	IEnumerator threeSecRoutine(){
 		yield return new WaitForSeconds (4);
 		PlayerPrefs.SetInt ("Scene", scene + 1);
 	}
+
+	bool IsTutorialSceneChange(int tutorialScene, int locValue)
+	{
+		return scene == tutorialScene && loc == locValue;
+	}
+
+	bool IsSceneInRange(int min,int max)
+	{
+		return scene > min && scene < max;
+	}
+
 }

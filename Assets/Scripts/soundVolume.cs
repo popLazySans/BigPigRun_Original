@@ -27,9 +27,14 @@ public class soundVolume : MonoBehaviour {
 
 		if (health <= 0)
 			Application.LoadLevel (2);
-		if (health == 30 && hassmoke == false) {
+		if (IsHasSmoke()) {
 			Instantiate (Smoke, Cube.transform.position, Cube.transform.rotation);
 			hassmoke = true;
 		}
+	}
+
+	bool IsHasSmoke()
+	{
+		return health == 30 && hassmoke == false;
 	}
 }
