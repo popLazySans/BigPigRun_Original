@@ -14,6 +14,7 @@ public class Doctor : MonoBehaviour
         UI = player.GetComponent<Point_UI>();
         Wave = player.GetComponent<WaveAndStage>();
         onTriggerReceiver = GetComponent<OnTriggerReceiver>();
+        Debug.Log("Checked");
         onTriggerReceiver.onTriggerEnter += Check;
     }
     public void Check()
@@ -21,7 +22,7 @@ public class Doctor : MonoBehaviour
         UI.complete_panel.SetActive(true);
         AutoObjectSpawnerLock.die = 0;
         Wave.Doctor_check();
-        Wave.prepare_to_nextwave(this.gameObject);
+        Wave.prepare_to_nextwave(gameObject);
     }
     public void OnDestroy()
     {

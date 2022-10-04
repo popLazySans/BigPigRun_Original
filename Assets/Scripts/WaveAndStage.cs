@@ -49,7 +49,7 @@ public class WaveAndStage : MonoBehaviour
     public void prepare_to_nextwave(GameObject other)
     {
         StartCoroutine(twoSec());
-        Destroy(gameObject);
+        Destroy(other);
     }
     IEnumerator twoSec()
     {

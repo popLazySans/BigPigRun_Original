@@ -55,6 +55,7 @@ public class Point : MonoBehaviour
         Protein_value += protein_plus;
         Carbo_value += car_plus;
         Vitamin_value += vin_plus;
+      
     }
     public void Doctor_reset_value()
     {
