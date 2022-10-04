@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Burgur : MonoBehaviour
+public class PineApple : MonoBehaviour
 {
     OnTriggerReceiver onTriggerReceiver;
     GameObject player;
@@ -16,21 +16,21 @@ public class Burgur : MonoBehaviour
     }
     public void Set_Detail()
     {
-        collisionObject.point_plus = 885;
-        collisionObject.Oil_plus = 2;
-        collisionObject.trans_plus = 378;
-        collisionObject.protein_plus = 204;
-        collisionObject.car_plus = 288;
-        collisionObject.vin_plus = 0;
-        collisionObject.itemN_text = "885 kCal";
-        collisionObject.itemP_text = "Protein 204 kCal";
-        collisionObject.itemC_text = "Carbohydrate 288 kCal";
-        collisionObject.itemO_text = "Fat 378 kCal";
-        collisionObject.itemV_text = "Vitamin 0 Energy";
+        collisionObject.point_plus = 150;
+        collisionObject.Oil_plus = 0;
+        collisionObject.trans_plus = 3;
+        collisionObject.protein_plus = 6;
+        collisionObject.car_plus = 156;
+        collisionObject.vin_plus = 3;
+        collisionObject.itemN_text = "150 kCal";
+        collisionObject.itemP_text = "Protein 6 kCal";
+        collisionObject.itemC_text = "Carbohydrate 156 kCal";
+        collisionObject.itemO_text = "Fat 3 kCal";
+        collisionObject.itemV_text = "Vitamin 3 Energy";
         collisionObject.black_bool = true;
-        collisionObject.I1_bool = true;
+        collisionObject.I1_bool = false;
         collisionObject.I2_bool = false;
-        collisionObject.I3_bool = false;
+        collisionObject.I3_bool = true;
         collisionObject.I4_bool = false;
         collisionObject.I5_bool = false;
         collisionObject.I6_bool = false;
@@ -41,7 +41,7 @@ public class Burgur : MonoBehaviour
     public void OnDestroy()
     {
         collisionObject.isFoodCollision = false;
-        onTriggerReceiver.onTriggerEnter -= Set_Detail;   
+        onTriggerReceiver.onTriggerEnter -= Set_Detail;
     }
 
 }

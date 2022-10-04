@@ -27,6 +27,7 @@ public class CollisionObject : MonoBehaviour
 	public bool I5_bool;
 	public bool I6_bool;
 	public bool I7_bool;
+	public bool isFoodCollision;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -45,7 +46,10 @@ public class CollisionObject : MonoBehaviour
 		var tryGetReceiver = other.collider.GetComponent<OnTriggerReceiver>();
 		if (tryGetReceiver != null)
 			tryGetReceiver.NotifyOnTriggerEnter();
-		Food_detail();
+        if (isFoodCollision == true)
+        {
+			Food_detail();
+		}
 		object_group(other);
 		Doctor(other);
 		
@@ -74,10 +78,6 @@ public class CollisionObject : MonoBehaviour
 		Salad(other);
 		Rice(other);
 		Watermelon(other);
-	}
-	public void PineApple(Collision other)
-	{
-		if (other.gameObject.tag == "Pineapple") { Food_detail(other, 150, 0, 3, 6, 156, 3, "150 kCal", "Protein 6 kCal", "Carbohydrate 156 kCal", "Fat 3 kCal", "Vitamin 3 Energy", true, false, false, true, false, false, false, false); }
 	}
 	public void Salad(Collision other)
 	{
