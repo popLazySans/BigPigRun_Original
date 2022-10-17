@@ -21,6 +21,7 @@ public class SceneLevelManager : MonoBehaviour
 	public GameObject corruptSound;
 	public static int currentScene;
 	public SpawnObjectManager spawnObjectFunction;
+	[SerializeField] materialDatabase materialDatabase;
 
 	void Update()
 	{
