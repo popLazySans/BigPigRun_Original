@@ -21,7 +21,6 @@ public class SceneLevelManager : MonoBehaviour
 	public GameObject corruptSound;
 	public static int currentScene;
 	public SpawnObjectManager spawnObjectFunction;
-	[SerializeField] materialDatabase materialDatabase;
 
 	void Update()
 	{
@@ -95,9 +94,9 @@ public class SceneLevelManager : MonoBehaviour
 		newGameObject.SetActive(true);
 	}
 
-	public void SetMaterialColor(byte r, byte g, byte b, byte a)
+	public void SetMaterialColor(int r, int g, int b, int a)
 	{
-		sphereColor.material.SetColor("_Color", new Color32(r, g, b, a));
+		sphereColor.material.SetColor("_Color", new Color32((byte)r, (byte)g, (byte)b, (byte)a));
 	}
 
 

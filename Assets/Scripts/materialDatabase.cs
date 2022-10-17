@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class materialDatabase : MonoBehaviour
+public abstract class MaterialDatabase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] protected List<MaterialData> materialDataList = new List<MaterialData>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+	private void Awake()
+	{
+		PrepareDatas();
+	}
+
+	public abstract void PrepareDatas();
 }
