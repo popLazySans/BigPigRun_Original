@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class MaterialDatabase : MonoBehaviour
 {
-	[SerializeField] protected List<MaterialData> materialDataList = new List<MaterialData>();
+	[SerializeField] public List<MaterialData> materialDataList = new List<MaterialData>();
 
 
 	private void Awake()

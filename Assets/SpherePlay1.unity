@@ -237,6 +237,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &50463420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &187832402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1512,6 +1514,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &201467939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1625,6 +1628,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &209753300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2005,6 +2009,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &241710675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2509,6 +2514,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &283756989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3339,6 +3345,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &431281635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3707,6 +3714,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &490279841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4200,6 +4208,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &516551999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4496,6 +4505,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &551677493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4840,6 +4850,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &589667837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5352,6 +5363,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &691330436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5477,6 +5489,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &695648233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5826,6 +5839,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &747015254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6442,6 +6456,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &800998273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6547,6 +6562,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &804620524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6781,6 +6797,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &812670793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6940,6 +6957,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &818375770
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7045,6 +7063,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &827694143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7122,6 +7141,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &829747187
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7787,6 +7807,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &921780070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7910,6 +7931,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &939403861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8161,6 +8183,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &952544240
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8238,6 +8261,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &955254886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8706,6 +8730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b15b6addf89ecc43811f5d972da81cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialDataList: []
   jsonFile: {fileID: 4900000, guid: 7868266f9b3113a469fec93c89e64120, type: 3}
 --- !u!4 &1000920018
 Transform:
@@ -9011,6 +9036,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1010262588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9581,6 +9607,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1093320284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10367,6 +10394,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1148252609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10509,6 +10537,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1180491179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10751,6 +10780,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1186891251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10842,6 +10872,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1198444046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10986,6 +11017,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1282053505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11091,6 +11123,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1287581155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11182,6 +11215,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1293162920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11793,6 +11827,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1327108108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12669,6 +12704,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1474805740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14360,6 +14396,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1638216702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15108,6 +15145,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1732413749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16023,6 +16061,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1896143330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16440,6 +16479,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &1959365939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16927,6 +16967,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2005411384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17060,6 +17101,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2015165063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17791,6 +17833,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2092669085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17961,6 +18004,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2104206861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18593,6 +18637,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2139423314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18670,6 +18715,7 @@ MonoBehaviour:
   crimsonSound: {fileID: 757269126}
   corruptSound: {fileID: 830386379}
   spawnObjectFunction: {fileID: 695648236}
+  materialDatabase: {fileID: 1000920017}
 --- !u!65 &2139785491
 BoxCollider:
   m_ObjectHideFlags: 0

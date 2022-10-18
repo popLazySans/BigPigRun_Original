@@ -22,6 +22,8 @@ public class SceneLevelManager : MonoBehaviour
 	public static int currentScene;
 	public SpawnObjectManager spawnObjectFunction;
 
+	[SerializeField] MaterialDatabase materialDatabase;
+
 	void Update()
 	{
 		currentScene = WaveAndStage.stage;
@@ -69,7 +71,7 @@ public class SceneLevelManager : MonoBehaviour
 		ChangeActiveGameObject(defaultSound, desertSound);
 		ChangeActiveGameObject(defaultScene, desertScene);
 		cactusSpawner.SetActive(true);
-		SetMaterialColor(249, 255, 50, 20);
+		SetMaterialColor(materialDatabase.materialDataList[0]);
 	}
 
 	public void SetCrimsonScene()
@@ -77,7 +79,7 @@ public class SceneLevelManager : MonoBehaviour
 		ChangeActiveGameObject(desertSound, crimsonSound);
 		ChangeActiveGameObject(desertScene, crimsonScene );
 		cactusSpawner.SetActive(false);
-		SetMaterialColor(255, 49, 49, 1);
+		SetMaterialColor(materialDatabase.materialDataList[1]);
 	}
 
 	public void SetCorruptScene()
@@ -85,7 +87,7 @@ public class SceneLevelManager : MonoBehaviour
 		ChangeActiveGameObject(crimsonSound, corruptSound);
 		ChangeActiveGameObject(crimsonScene, corruptScene);
 		ChangeActiveGameObject(defaultCastle, corruptCastle);
-		SetMaterialColor(81, 31, 106, 1);
+		SetMaterialColor(materialDatabase.materialDataList[2]);
 	}
 
 	public void ChangeActiveGameObject(GameObject currentGameObject, GameObject newGameObject)
@@ -94,9 +96,9 @@ public class SceneLevelManager : MonoBehaviour
 		newGameObject.SetActive(true);
 	}
 
-	public void SetMaterialColor(int r, int g, int b, int a)
+	public void SetMaterialColor(MaterialData materialDatabase)
 	{
-		sphereColor.material.SetColor("_Color", new Color32((byte)r, (byte)g, (byte)b, (byte)a));
+		sphereColor.material.SetColor("_Color", new Color32((byte)materialDatabase.r, (byte)materialDatabase.g, (byte)materialDatabase.b, (byte)materialDatabase.a));
 	}
 
 
