@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Link : MonoBehaviour {
-
+	[SerializeField] GameObject foodListPage;
 	public static int off;
 	public int tm;
 	//public BGSoundScript bg;
@@ -35,9 +36,9 @@ public class Link : MonoBehaviour {
 	public void LinkToHow(){
 		SceneManager.LoadScene ("how");
 	}
-	public void LinkToMain(){
-		
+	public void LinkToMain(){		
 		SceneManager.LoadScene ("main");
+		
 		off = 0;
 		PlayerMovementScript.oil = 0;
 		WaveAndStage.stage = 1;
@@ -49,6 +50,16 @@ public class Link : MonoBehaviour {
 		tm =1;
 		AutoObjectSpawnerLock.die = 0;
 	}
+	public void CloseDataTab()
+	{
+		foodListPage.SetActive(false);
+	}
+
+	public void OpenDataTab()
+	{
+		foodListPage.SetActive(true);
+	}
+
 	public void LinkToScore(){
 		SceneManager.LoadScene ("Score");
 	}
