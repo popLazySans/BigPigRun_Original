@@ -8,8 +8,8 @@ public class Info : MonoBehaviour {
 	public InputField w;
 	public InputField n;
 	public InputField a;
-	private float valueH;
-	private float valueW;
+	private int valueH;
+	private int valueW;
 	private string valueN;
 	private int valueA;
 	// Use this for initialization
@@ -30,14 +30,14 @@ public class Info : MonoBehaviour {
 	}
 	public void Height(){
 		SceneManager.LoadScene ("Weight");
-		valueH = float.Parse(h.text);
-		PlayerPrefs.SetFloat ("Height", valueH);
+		valueH = int.Parse(h.text);
+		PlayerPrefs.SetInt ("Height", valueH);
 		//Debug.Log (valueH);
 	}
 	public void Weight(){
 		SceneManager.LoadScene ("Age");
-		valueW = float.Parse (w.text);
-		PlayerPrefs.SetFloat ("Weight", valueW);
+		valueW = int.Parse (w.text);
+		PlayerPrefs.SetInt ("weight", valueW);
 	}
 	public void Age(){
 		SceneManager.LoadScene ("Thank");

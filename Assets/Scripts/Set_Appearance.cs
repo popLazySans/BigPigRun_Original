@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Set_Appearance : MonoBehaviour
+public abstract class Set_Appearance<T> : MonoBehaviour
 {
-    public int gender;
+	public T data;
+	/*public int gender;
     public int age;
     public string name;
     public float height;
     public float weight;
+
+	
     void Start()
     {
         SetAppearance();
@@ -50,5 +53,9 @@ public class Set_Appearance : MonoBehaviour
 	{
 		string name = PlayerPrefs.GetString("Name", "");
 		return name;
-	}
+	}*/
+	protected virtual T SetGen()
+    {
+		return data;
+    }
 }

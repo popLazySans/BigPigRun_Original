@@ -4,32 +4,53 @@ using UnityEngine;
 
 public class Appearance_to_Point : MonoBehaviour
 {
-	private Set_Appearance appearance;
+	private gender gender;
+	private age age;
+	private height height;
+	private weight weight;
+	private name name;
 	private Point point;
+
+	public bool fixUpdateBug = false;
     // Start is called before the first frame update
     void Start()
     {
-		appearance = GetComponent<Set_Appearance>();
+		gender = GetComponent<gender>();
+		age = GetComponent<age>();
+		height = GetComponent<height>();
+		weight = GetComponent<weight>();
+		name = GetComponent<name>();
 		point = GetComponent<Point>();
-		checkGender();
+		
+		/*Debug.Log("gen "+gender.value);
+		Debug.Log("age "+age.value);
+		Debug.Log("height "+ height.value);
+		Debug.Log("weight"+ weight.value);
+		Debug.Log("name "+name.value);*/
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        if (fixUpdateBug == false)
+        {
+			checkGender();
+			fixUpdateBug = true;
+		}
+	}
 	public void checkGender()
 	{
-		if (appearance.gender == 1) { Man_Calculator(); }
-		if (appearance.gender == 2) { Woman_Calculator(); }
+		if (gender.value == 1) { Man_Calculator(); }
+		if (gender.value == 2) { Woman_Calculator(); }
 	}
 	public void Man_Calculator()
 	{
-		point.point_current = ((10f * appearance.height) + (6.25f * appearance.weight) - (5f * appearance.age) + 5f) * 1.2f;
+		point.point_current = ((10f * height.value) + (6.25f * weight.value) - (5f * age.value) + 5f) * 1.2f;
+		Debug.Log("calculated man!!!");
 	}
 	public void Woman_Calculator()
 	{
-		point.point_current = ((10f * appearance.height) + (6.25f * appearance.weight) - (5f * appearance.age) - 161f) * 1.2f;
+		point.point_current = ((10f * height.value) + (6.25f * weight.value) - (5f * age.value) - 161f) * 1.2f;
+		Debug.Log("calculated woman!!!");
 	}
 }
