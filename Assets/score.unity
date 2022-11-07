@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465775, g: 0.4964118, b: 0.57481784, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465781, g: 0.4964127, b: 0.574819, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 11229291}
   - component: {fileID: 11229290}
   m_Layer: 5
-  m_Name: number3S
+  m_Name: number3Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 669268931}
   - component: {fileID: 669268930}
   m_Layer: 5
-  m_Name: number1N
+  m_Name: number1Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 698911706}
   - component: {fileID: 698911705}
   m_Layer: 5
-  m_Name: number5N
+  m_Name: number5Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,7 +816,7 @@ GameObject:
   - component: {fileID: 868159573}
   - component: {fileID: 868159572}
   m_Layer: 5
-  m_Name: number4N
+  m_Name: number4Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Best Score Is
+  m_Text: Score
 --- !u!222 &921280338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 1264450772}
   - component: {fileID: 1264450771}
   m_Layer: 5
-  m_Name: number3N
+  m_Name: number3Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: 1404087901}
   - component: {fileID: 1404087900}
   m_Layer: 5
-  m_Name: number5S
+  m_Name: number5Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1598,7 +1598,7 @@ GameObject:
   - component: {fileID: 1475119855}
   - component: {fileID: 1475119854}
   m_Layer: 5
-  m_Name: number2S
+  m_Name: number2Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1900,7 +1900,7 @@ GameObject:
   - component: {fileID: 1579471812}
   - component: {fileID: 1579471811}
   m_Layer: 5
-  m_Name: number4S
+  m_Name: number4Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2109,7 +2109,7 @@ GameObject:
   - component: {fileID: 1936935722}
   - component: {fileID: 1936935721}
   m_Layer: 5
-  m_Name: number2N
+  m_Name: number2Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 1970549818}
   - component: {fileID: 1970549817}
   m_Layer: 5
-  m_Name: number1S
+  m_Name: number1Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
