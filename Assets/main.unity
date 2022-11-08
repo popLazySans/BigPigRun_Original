@@ -916,7 +916,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 376971600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886934242}
+        m_TargetAssemblyTypeName: ShowListUI, Assembly-CSharp
+        m_MethodName: SortByLowestEnergy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &376971600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1931,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 763956711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886934242}
+        m_TargetAssemblyTypeName: ShowListUI, Assembly-CSharp
+        m_MethodName: FilterVitaminOnly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &763956711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2496,7 +2520,7 @@ GameObject:
   - component: {fileID: 930642798}
   - component: {fileID: 930642797}
   m_Layer: 5
-  m_Name: FoodCount
+  m_Name: MaxEnergyFoodCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2518,8 +2542,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294, y: 222}
-  m_SizeDelta: {x: 201.27, y: 40}
+  m_AnchoredPosition: {x: -251.09, y: 222}
+  m_SizeDelta: {x: 287.08, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930642797
 MonoBehaviour:
@@ -2554,7 +2578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Food Count : 0'
+  m_Text: 'Max Energy : 0'
 --- !u!222 &930642798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2645,7 +2669,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 953333396}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886934242}
+        m_TargetAssemblyTypeName: ShowListUI, Assembly-CSharp
+        m_MethodName: SortByHightestEnergy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &953333396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3014,7 +3050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1085912273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1886934242}
+        m_TargetAssemblyTypeName: ShowListUI, Assembly-CSharp
+        m_MethodName: SortByAToZ
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1085912273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4997,6 +5045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ad8ad421e21c042acef835609536df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxEnergyText: {fileID: 930642797}
   foodListParent: {fileID: 786076910}
   foodListPrefab: {fileID: 92450130}
   foodLists: []
