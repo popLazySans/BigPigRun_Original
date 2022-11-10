@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 [System.Serializable]
 
-public class MaterialData
+public class FoodData
 {
 	public string name;
 
-	public int r, g, b, a;
-
+	public int energy, protein, carbohydrate, fat, vitamin;
 
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Chicken",
+        "energy" : 738,
+        "protein" : 360,
+        "carbohydrate" : 22,
+        "fat" : 324,
+        "vitamin" : 0
+    },
+    {
+        "name" : "PineApple",
+        "energy" : 150,
+        "protein" : 6,
+        "carbohydrate" : 156,
+        "fat" : 3,
+        "vitamin" : 3
+    },
+    {
+        "name" : "Rice",
+        "energy" : 390,
+        "protein" : 32,
+        "carbohydrate" : 336,
+        "fat" : 8,
+        "vitamin" : 0
+    },
+    {
+        "name" : "Salad",
+        "energy" : 61,
+        "protein" : 12,
+        "carbohydrate" : 52,
+        "fat" : 5,
+        "vitamin" : 10
+    },
+    {
+        "name" : "Watermalon",
+        "energy" : 91,
+        "protein" : 7,
+        "carbohydrate" : 96,
+        "fat" : 5,
+        "vitamin" : 2
+    },
+    {
+        "name" : "WhiteMushroom",
+        "energy" : 67,
+        "protein" : 37,
+        "carbohydrate" : 40,
+        "fat" : 8,
+        "vitamin" : 5
+    }
+]
