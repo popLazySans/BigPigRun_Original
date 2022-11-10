@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class WaveAndStage : MonoBehaviour
 {
     private Cause_of_Die DieManager;
@@ -9,20 +10,29 @@ public class WaveAndStage : MonoBehaviour
     private Point_UI UI;
     public static int stage = 1;
     public float freqTime = 0.01f;
+    public TimeSpan delayTimeSpan;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(count());
+
         DieManager = GetComponent<Cause_of_Die>();
         pointManager = GetComponent<Point>();
         UI = GetComponent<Point_UI>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void FixedUpdate()
     {
+        twoSec();
+        if (delayTimeSpan.TotalSeconds > 0) 
+        {
+            delayTimeSpan -= TimeSpan.FromSeconds(Time.deltaTime);
+        }
         
     }
+    
+    
     public void Doctor_check()
     {
         if (middlePoint()) { Doctor_complete_check(); }
@@ -46,21 +56,26 @@ public class WaveAndStage : MonoBehaviour
         DieManager.failed_BG.SetActive(true);
         DieManager.show_died_text();
     }
-    public void prepare_to_nextwave(GameObject other)
+    public void prepare_to_nextwave(GameObject other) 
     {
-        StartCoroutine(twoSec());
+        delayTimeSpan = new TimeSpan(2);
+        
         Destroy(other);
     }
-    IEnumerator twoSec()
+    public void  twoSec() //?????????
     {
-        yield return new WaitForSeconds(2);
-        UI.complete_panel.SetActive(false);
+        Debug.Log(delayTimeSpan.TotalSeconds);
+        //yield return new WaitForSeconds(2); //ui???????????wave ???
+        if (delayTimeSpan.TotalSeconds <= 0) 
+        { 
+            UI.complete_panel.SetActive(false);
+        }
     }
     IEnumerator count()
     {
         while (true)
         {
-            yield return new WaitForSeconds(freqTime);
+            yield return new WaitForSeconds(freqTime); 
            pointManager.count_calculate();
             if (stage == 3 && freqTime == 1) { freqTime = (freqTime) / 3; }
         }
